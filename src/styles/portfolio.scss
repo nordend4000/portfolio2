@@ -1,0 +1,411 @@
+@import "./variables";
+.xpanel {
+	width: 100%;
+	height: 100vh;
+}
+.mobile-col {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+.xcontainer {
+	width: 600%;
+	height: 100vh;
+	display: flex;
+	flex-wrap: nowrap;
+}
+.Portfolio {
+	background-color: white;
+	background-image: $topo-background;
+	&__landing {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		height: 100vh;
+		margin-left: 15%;
+		& h1 {
+			font-family: "ShadowsIntoLight";
+			font-size: 5em;
+			color: var(--main-dark);
+			letter-spacing: 3px;
+		}
+		& h2 {
+			font-size: 1.6em;
+			color: var(--sec-dark);
+			letter-spacing: 3px;
+			word-spacing: 4%;
+			padding-right: 20px;
+		}
+	}
+
+	&__project {
+		height: 100vh;
+		margin-left: 15%;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		&__text {
+			width: 100%;
+			& h3 {
+				color: var(--sec-dark);
+				font-family: "ShadowsIntoLight";
+				font-size: 1.4em;
+				width: 100%;
+				margin-bottom: 1%;
+			}
+			& h5 {
+				color: var(--sec-dark);
+				font-family: "ShadowsIntoLight";
+				font-size: 1em;
+				width: 100%;
+				margin: 2% auto;
+			}
+			& p {
+				color: var(--main-darker);
+				font-weight: 500;
+				font-size: 0.7em;
+				line-height: 24px;
+				letter-spacing: 1.8px;
+				padding-right: 15px;
+			}
+			&__stackline {
+				width: 90%;
+			}
+			&__buttons {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+				align-items: center;
+				margin-top: 4%;
+				margin-bottom: 4%;
+				width: 100%;
+				&__btn {
+					background-color: #f49a9841;
+					color: #dc6969;
+					font-family: "ShadowsIntoLight";
+					letter-spacing: 1.2px;
+					font-size: 0.8em;
+					border: solid 1px #dc6969;
+					border-radius: 20px;
+					padding: 2px 30px;
+					box-shadow: 2px 4px 8px #f49a9870;
+					transition: 0.3s ease-out;
+					margin: 4% auto;
+				}
+				&__btn:hover {
+					cursor: pointer;
+					background-color: #f49a98b1;
+					color: white;
+					border: solid 1px #dc6969;
+					box-shadow: 1px 1px 2px #f49a9870;
+					transition: 0.2s ease-in;
+				}
+			}
+		}
+		&__image {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			&__top {
+				display: flex;
+				align-items: flex-start;
+				height: 100%;
+				width: 60%;
+				&__img1 {
+					position: relative;
+					top: 0px;
+					left: 0;
+					width: 100%;
+					z-index: 2;
+				}
+			}
+			&__bottom {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				width: 100%;
+				&__img2 {
+					width: 100%;
+					margin-top: 0%;
+					z-index: 10;
+				}
+				&__img2 img {
+					width: 100%;
+					margin-left: 0%;
+					height: 100%;
+				}
+				&__img3 {
+					width: 100%;
+					margin-left: 0%;
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}
+.Moreprojects {
+	border-top: 1px solid var(--sec-light);
+	&__want {
+		font-family: "ShadowsIntoLight";
+		font-weight: 700;
+		letter-spacing: 1.5px;
+		font-size: 0.6em;
+		color: var(--sec-dark);
+		margin-top: 12%;
+		padding-bottom: 18%;
+		padding-right: 10px;
+		margin-left: 10%;
+		text-align: center;
+		word-spacing: 10px;
+	}
+}
+.fifty {
+	width: 60%;
+	margin-bottom: 5%;
+}
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************       TABLET       ****************************************
+********************************************************************************************/
+@media only screen and (min-width: 732px) {
+	.subtitle-portfolio {
+		font-size: 1.2em;
+		color: var(--sec-dark);
+		letter-spacing: 2px;
+		font-weight: 400;
+		word-spacing: 4%;
+		margin-left: 12%;
+		margin-top: -6%;
+	}
+	.Portfolio {
+		background-color: white;
+		background-image: $topo-background;
+		&__project {
+			height: 100vh;
+			margin-left: 12%;
+			display: flex;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			&__text {
+				width: 50%;
+				& h3 {
+					font-size: 2.1em;
+					width: 100%;
+					margin-bottom: 2%;
+				}
+				& h5 {
+					font-size: 1.3em;
+					width: 100%;
+					margin: 2.5% auto;
+				}
+				& p {
+					font-weight: 500;
+					font-size: 0.7em;
+					line-height: 30px;
+					letter-spacing: 1.8px;
+					padding-right: 25px;
+				}
+				&__stackline {
+					width: 90%;
+				}
+				&__buttons {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-evenly;
+					align-items: center;
+					margin-top: 5%;
+					width: 100%;
+					&__btn {
+						letter-spacing: 1.2px;
+						font-size: 0.9em;
+						border-radius: 20px;
+						padding: 2px 30px;
+						box-shadow: 2px 4px 8px #f49a9870;
+						transition: 0.3s ease-out;
+						margin: 2% auto;
+					}
+					&__btn:hover {
+						box-shadow: 1px 1px 2px #f49a9870;
+						transition: 0.2s ease-in;
+					}
+				}
+			}
+			&__image {
+				width: 50%;
+				height: 85%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				&__top {
+					display: inline;
+					height: 50%;
+					width: 100%;
+					&__img1 {
+						position: relative;
+						top: 0px;
+						left: 0;
+						width: 70%;
+						z-index: 2;
+					}
+				}
+				&__bottom {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 100%;
+					&__img2 {
+						width: 60%;
+						margin-top: -25%;
+						z-index: 10;
+					}
+					&__img2 img {
+						width: 100%;
+					}
+					&__img3 {
+						width: 70%;
+						margin-top: -1%;
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+	}
+}
+.Moreprojects {
+	&__want {
+		letter-spacing: 1.5px;
+		font-size: 3rem;
+		margin-top: 5%;
+		padding-bottom: 12%;
+		word-spacing: 10px;
+	}
+}
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************       DESKTOP       ****************************************
+********************************************************************************************/
+@media only screen and (min-width: 1130px) {
+	.subtitle-portfolio {
+		font-size: 2em;
+		color: var(--sec-dark);
+		letter-spacing: 3px;
+		font-weight: 400;
+		word-spacing: 4%;
+		margin-left: 12%;
+		margin-top: -6%;
+	}
+	.Portfolio {
+		background-color: white;
+		background-image: $topo-background;
+
+		&__project {
+			height: 100vh;
+			margin-left: 12%;
+			display: flex;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			&__text {
+				width: 50%;
+				& h3 {
+					color: var(--sec-dark);
+					font-family: "ShadowsIntoLight";
+					font-size: 2.5em;
+					width: 100%;
+					margin-bottom: 1%;
+				}
+				& h5 {
+					color: var(--sec-dark);
+					font-family: "ShadowsIntoLight";
+					font-size: 1.5em;
+					width: 100%;
+					margin: 2% auto;
+				}
+				& p {
+					color: var(--main-darker);
+					font-weight: 500;
+					font-size: 0.9em;
+					line-height: 30px;
+					letter-spacing: 1.8px;
+					padding-right: 15px;
+				}
+				&__stackline {
+					width: 90%;
+				}
+				&__buttons {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-evenly;
+					align-items: center;
+					margin-top: 4%;
+					width: 100%;
+					&__btn {
+						background-color: #f49a9841;
+						color: #dc6969;
+						font-family: "ShadowsIntoLight";
+						letter-spacing: 1.2px;
+						font-size: 1.1em;
+						border: solid 1px #dc6969;
+						border-radius: 20px;
+						padding: 3px 40px;
+						box-shadow: 2px 4px 8px #f49a9870;
+						transition: 0.3s ease-out;
+						margin: 2% auto;
+					}
+					&__btn:hover {
+						cursor: pointer;
+						background-color: #f49a98b1;
+						color: white;
+						border: solid 1px #dc6969;
+						box-shadow: 1px 1px 2px #f49a9870;
+						transition: 0.2s ease-in;
+					}
+				}
+			}
+			&__image {
+				width: 50%;
+				height: 85%;
+				display: block;
+				&__top {
+					display: inline;
+					height: 50%;
+					width: 100%;
+					&__img1 {
+						position: relative;
+						top: 0px;
+						left: 0;
+						width: 70%;
+						z-index: 2;
+					}
+				}
+				&__bottom {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					width: 100%;
+					&__img2 {
+						width: 60%;
+						margin-top: -25%;
+						z-index: 10;
+					}
+					&__img2 img {
+						width: 100%;
+					}
+					&__img3 {
+						width: 70%;
+						margin-top: -1%;
+						opacity: 0.7;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,109 @@
+#arrow {
+	cursor: pointer;
+	font-family: "ShadowsIntoLight";
+	color: var(--sec-dark);
+	transition: ease-in 0.5s;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	margin-bottom: 10%;
+	margin-top: 2%;
+}
+.arrow-large {
+	font-size: 2.2em;
+	text-decoration: none;
+}
+.arrow-small {
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+#arrow:hover {
+	color: var(--main-dark);
+	transition: ease-in-out 0.5s;
+}
+.arrow-large svg {
+	width: 70px;
+	height: 70px;
+}
+.arrow-small svg {
+	width: 30px;
+	height: 30px;
+}
+
+#darkgroup {
+	fill: var(--main-dark);
+}
+#lightgroup {
+	fill: var(--sec-light);
+}
+#triangledark2,
+#trianglelight,
+#triangledark1 {
+	transition: all 1s ease;
+}
+#triangledark2 {
+	transform: translateX(-100%);
+}
+#arrow:hover #trianglelight {
+	transform: translateX(10%);
+}
+#arrow:hover #triangledark1 {
+	transform: translateX(10%);
+	opacity: 0;
+}
+#arrow:hover #triangledark2 {
+	transform: translateX(-10%);
+}
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************       TABLET       ****************************************
+********************************************************************************************/
+@media only screen and (min-width: 732px) {
+	#arrow {
+		margin-bottom: 10%;
+	}
+	.arrow-large svg {
+		width: 100px;
+		height: 100px;
+	}
+	.arrow-small svg {
+		width: 50px;
+		height: 50px;
+	}
+	.arrow-large {
+		font-size: 2.8em;
+		text-decoration: none;
+	}
+	.arrow-small {
+		font-size: 1.5em;
+		text-decoration: none;
+	}
+}
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************      DESKTOP   ****************************************
+********************************************************************************************/
+@media only screen and (min-width: 1130px) {
+	#arrow {
+		margin-bottom: 10%;
+	}
+	.arrow-large svg {
+		width: 100px;
+		height: 100px;
+	}
+	.arrow-small svg {
+		width: 50px;
+		height: 50px;
+	}
+	.arrow-large {
+		font-size: 3.2em;
+		text-decoration: none;
+	}
+	.arrow-small {
+		font-size: 1.7em;
+		text-decoration: none;
+	}
+}

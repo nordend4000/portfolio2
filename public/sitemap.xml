@@ -1,0 +1,46 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<urlset xmlns="https://romaingioux.dev">
+	<url>
+		<loc>https://romaingioux.dev</loc>
+		<lastmod>2021-11-28</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>1.0</priority>
+	</url>
+		<url>
+		<loc>https://romaingioux.dev/portfolio</loc>
+		<lastmod>2021-11-28</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>1.0</priority>
+	</url>
+		<url>
+		<loc>https://romaingioux.dev/skills</loc>
+		<lastmod>2021-11-28</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.9</priority>
+	</url>
+		<url>
+		<loc>https://romaingioux.dev/about</loc>
+		<lastmod>2021-11-28</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.9</priority>
+	</url>
+			<url>
+		<loc>https://romaingioux.dev/contact</loc>
+		<lastmod>2021-11-28</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.8</priority>
+	</url>
+				<url>
+		<loc>https://romaingioux.dev/static/media/cv-en.7f42e615.pdf</loc>
+		<lastmod>2021-11-28</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.9</priority>
+	</url>
+				<url>
+		<loc>https://romaingioux.dev/static/media/cv-fr.a247e5de.pdf</loc>
+		<lastmod>2021-11-28</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	
+</urlset>

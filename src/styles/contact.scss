@@ -1,0 +1,442 @@
+@import "./variables";
+.Contact {
+	border: 1px solid transparent;
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+	background-color: #f7f5f9;
+	background-image: $topo-background;
+	height: 100%;
+	border: 1px solid transparent;
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+	background-color: #f7f5f9;
+	background-image: $topo-background;
+	height: 100%;
+	h2 {
+		font-family: "ShadowsIntoLight";
+		font-weight: 700;
+		letter-spacing: 1.5px;
+		font-size: 1.4rem;
+		color: var(--sec-dark);
+		margin-top: 1%;
+		padding-right: 10px;
+		margin-left: 10%;
+		text-align: center;
+		word-spacing: 10px;
+	}
+	&__recaptcha {
+		display: flex;
+		justify-content: center;
+	}
+	&__landing {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100vh;
+		&__box1 {
+			width: 100%;
+			& h1 {
+				font-family: "ShadowsIntoLight";
+				font-size: 4em;
+				color: var(--main-dark);
+				margin-top: 20%;
+				margin-left: 10%;
+				text-align: center;
+				letter-spacing: 5px;
+			}
+			&__subtitle {
+				font-family: "ShadowsIntoLight";
+				font-weight: 700;
+				letter-spacing: 1.5px;
+				font-size: 1rem;
+				color: var(--sec-dark);
+				margin-top: 1%;
+				padding-right: 10px;
+				margin-left: 10%;
+				text-align: center;
+				word-spacing: 18px;
+			}
+		}
+		&__box2 {
+			font-weight: 500;
+			/*background-color: #7382a253;*/
+			background-color: #9cb8cc7c;
+			border-radius: 10px;
+			font-size: 0.7rem;
+			color: var(--main-darker);
+			letter-spacing: 2.2px;
+			line-height: 26px;
+			margin-bottom: 0px;
+			padding: 4%;
+			width: 87%;
+			margin-left: 10%;
+			margin-right: 3%;
+			margin-top: 6%;
+		}
+	}
+	&__form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		&__label {
+			color: var(--main-dark);
+			font-family: "ShadowsIntoLight";
+			padding: 10px 0px;
+			font-size: 1.5em;
+			margin-top: 4%;
+			letter-spacing: 3px;
+		}
+		&__input {
+			width: 60%;
+			padding: 20px;
+			border: 1px solid transparent;
+			border-radius: 20px;
+			color: var(--sec-dark);
+			font-weight: 600;
+			letter-spacing: 2px;
+			background-color: #c1d9e941;
+			&::placeholder {
+				color: var(--main-medium);
+				font-weight: 300;
+			}
+			&:hover {
+				cursor: text;
+			}
+			&:focus {
+				background-color: #9cb8cc6b;
+			}
+		}
+		&__textarea {
+			width: 60%;
+			padding: 20px;
+			padding-bottom: 80px;
+			border: 1px solid transparent;
+			border-radius: 20px;
+			color: var(--sec-dark);
+			font-weight: 600;
+			letter-spacing: 2px;
+			background-color: #c1d9e941;
+			&::placeholder {
+				color: var(--main-medium);
+				font-weight: 300;
+			}
+			&:hover {
+				cursor: text;
+			}
+			&:focus {
+				background-color: #9cb8cc6b;
+			}
+		}
+		&__check {
+			padding: 10px 0px;
+			color: var(--sec-dark);
+		}
+	}
+
+	&__send {
+		width: 40%;
+		margin: 5% 30%;
+		text-align: center;
+		margin-top: 10%;
+		&__btn {
+			padding: 10px 20px;
+			color: #7382a2;
+			background: #7382a25b;
+			border: solid 1px #7382a2;
+			border-radius: 20px;
+			padding: 10px 10px;
+			box-shadow: 2px 4px 10px #7382a2;
+			font-family: "ShadowsIntoLight";
+			letter-spacing: 1.2px;
+			font-size: 1.1em;
+			transition: 0.3s ease-out;
+		}
+		&__btn:hover {
+			cursor: pointer;
+			background-color: #7382a2c9;
+			color: white;
+			box-shadow: 1px 1px 2px #7382a276;
+			transition: 0.2s ease-in;
+		}
+	}
+	&__answer {
+		width: 90%;
+		margin-left: 8%;
+		padding: 20px 40px;
+		margin-top: 0%;
+		margin-bottom: 1%;
+		background-color: #9cb8cc3a;
+		border-radius: 20px;
+		color: var(--main-darker);
+		letter-spacing: 2px;
+		font-family: "ShadowsIntoLight";
+		font-size: 1em;
+	}
+	&__error {
+		width: 80%;
+		margin-left: 10%;
+		padding: 30px 50px;
+		margin-top: 0%;
+		margin-bottom: 1%;
+		background-color: #f49a9862;
+		border-radius: 20px;
+		color: var(--main-darker);
+		letter-spacing: 2px;
+		font-family: "ShadowsIntoLight";
+		font-size: 1.3em;
+	}
+}
+.Contact-direct {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	color: var(--main-darker);
+	padding-top: 12%;
+	letter-spacing: 1.5px;
+	font-size: 0.7em;
+}
+.Contact-subtitle {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	padding-bottom: 12%;
+	color: var(--sec-dark);
+	font-family: "ShadowsIntoLight";
+	font-size: 1em;
+	letter-spacing: 2.4px;
+	font-weight: 600;
+	padding-top: 2%;
+}
+
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************       TABLET       ****************************************
+********************************************************************************************/
+@media only screen and (min-width: 732px) {
+	.Contact {
+		h2 {
+			font-weight: 700;
+			letter-spacing: 1.8px;
+			font-size: 1.5rem;
+			margin-top: 10px;
+			padding-right: 10px;
+			margin-left: 14vw;
+			text-align: left;
+		}
+		&__landing {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			&__box1 {
+				width: 100%;
+				& h1 {
+					font-size: 6em;
+					margin-left: 14vw;
+					margin-top: 8%;
+					text-align: left;
+				}
+				&__subtitle {
+					font-weight: 700;
+					letter-spacing: 1.8px;
+					font-size: 1.2rem;
+					margin-top: 5px;
+					padding-right: 10px;
+					margin-left: 12vw;
+					text-align: left;
+				}
+			}
+			&__box2 {
+				font-weight: 500;
+				font-size: 0.8rem;
+				letter-spacing: 2.4px;
+				line-height: 30px;
+				margin-bottom: 10px;
+				padding: 2% 3%;
+				width: 78%;
+				margin-top: 5%;
+				margin-left: 4%;
+			}
+		}
+		&__form {
+			&__label {
+				font-size: 2em;
+				margin-top: 2%;
+			}
+			&__input {
+				width: 40%;
+				padding: 14px;
+				font-weight: 600;
+				font-size: 1em;
+			}
+			&__textarea {
+				width: 60%;
+				padding: 14px;
+				padding-bottom: 80px;
+				font-size: 1.2em;
+			}
+		}
+		&__send {
+			width: 30%;
+			margin: 5% 35%;
+			text-align: center;
+			margin-top: 4%;
+			margin-bottom: 8%;
+			&__btn {
+				padding: 10px 10px;
+				letter-spacing: 1.2px;
+				font-size: 1.2em;
+			}
+		}
+		&__answer {
+			width: 80%;
+			margin-left: 10%;
+			padding: 25px 40px;
+			margin-top: 2%;
+			margin-bottom: 5%;
+			letter-spacing: 2px;
+			font-size: 1.1em;
+		}
+		&__error {
+			width: 80%;
+			margin-left: 10%;
+			padding: 25px 40px;
+			margin-top: 2%;
+			margin-bottom: 5%;
+			letter-spacing: 2px;
+			font-size: 1.1em;
+		}
+	}
+	.Contact-direct {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		color: var(--main-darker);
+		padding-top: 1%;
+		letter-spacing: 1.5px;
+		font-size: 1em;
+	}
+	.Contact-subtitle {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		padding-bottom: 1%;
+		color: var(--sec-dark);
+		font-family: "ShadowsIntoLight";
+		font-size: 1.5em;
+		letter-spacing: 2.4px;
+		font-weight: 600;
+		padding-top: 2%;
+	}
+}
+
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************      DESKTOP   ****************************************
+********************************************************************************************/
+@media only screen and (min-width: 1130px) {
+	.Contact {
+		h2 {
+			font-weight: 700;
+			letter-spacing: 4px;
+			font-size: 1.7rem;
+			margin-top: 10px;
+			padding-right: 0px;
+			margin-left: 1%;
+			text-align: left;
+			word-spacing: 10px;
+		}
+		&__landing {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			&__box1 {
+				margin-left: 11%;
+				width: 100%;
+				& h1 {
+					font-size: 10em;
+					margin-left: -2%;
+					margin-top: 10px;
+					text-align: left;
+					padding-right: 20px;
+				}
+				&__subtitle {
+					font-weight: 700;
+					letter-spacing: 2.2px;
+					font-size: 1.3rem;
+					margin-top: 10px;
+					padding-right: 2px;
+					margin-left: -10%;
+					text-align: center;
+				}
+			}
+			&__box2 {
+				font-weight: 500;
+				font-size: 1rem;
+				letter-spacing: 2.5px;
+				line-height: 32px;
+				margin-bottom: 10px;
+				padding: 4%;
+				width: 100%;
+				margin-top: 5%;
+				margin-left: 0;
+				margin-right: 2%;
+			}
+		}
+		&__form {
+			&__label {
+				font-size: 2.2em;
+				margin-top: 1%;
+			}
+			&__input {
+				width: 40%;
+				padding: 16px;
+				font-weight: 600;
+				font-size: 1em;
+			}
+			&__textarea {
+				width: 60%;
+				padding: 16px;
+				font-size: 1.2em;
+				padding-bottom: 80px;
+			}
+		}
+		&__send {
+			width: 25%;
+			margin: 5% 37.5%;
+			text-align: center;
+			margin-top: 2%;
+			margin-bottom: 8%;
+			&__btn {
+				padding: 10px 10px;
+				letter-spacing: 1.2px;
+				font-size: 1.3em;
+			}
+		}
+		&__answer {
+			width: 80%;
+			margin-left: 10%;
+			padding: 30px 50px;
+			margin-top: 2%;
+			margin-bottom: 5%;
+			letter-spacing: 2px;
+			font-size: 1.2em;
+		}
+		&__error {
+			width: 80%;
+			margin-left: 10%;
+			padding: 30px 50px;
+			margin-top: 2%;
+			margin-bottom: 5%;
+			letter-spacing: 2px;
+			font-size: 1.2em;
+		}
+	}
+}

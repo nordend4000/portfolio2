@@ -1,0 +1,124 @@
+@import "./variables";
+/*---------------------------------------   SIDE LINE   -------------------------------------------*/
+.SideLine {
+	z-index: 200;
+	position: fixed;
+	bottom: 0px;
+	left: 3px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 100vh;
+	min-height: 100vh;
+	max-height: 100vh;
+	&__icons {
+		color: var(--sec-dark);
+		font-size: 2em;
+		padding-top: 10px;
+	}
+	&__line {
+		border-right: 1px solid var(--sec-dark);
+		margin: 5px auto;
+		height: 10vh;
+	}
+	&__email {
+		text-decoration: none;
+		font-weight: bold;
+		color: var(--sec-dark);
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		font-size: 0.8em;
+		font-weight: 500;
+		letter-spacing: 3.5px;
+		margin-right: 9px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		border-radius: 2px;
+		transition: 0.4s ease-in;
+	}
+	&__email:hover,
+	&__icons:hover {
+		cursor: pointer;
+		color: var(--main-darker);
+		transition: 0.3s ease-out;
+	}
+}
+/*---------------------------------------   LINK  -------------------------------------------*/
+.Link {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	z-index: 10;
+	width: 90%;
+	margin-left: 7%;
+	margin-top: 6%;
+	margin-bottom: 2%;
+	&__link {
+		text-decoration: none;
+	}
+}
+
+.triptic2-pages {
+	position: absolute;
+	top: 3vh;
+	left: 10vw;
+	width: 100vw;
+	opacity: 0.4;
+}
+.notfound {
+	width: 100%;
+	height: 100vh;
+	padding: 2%;
+	background-color: #f7f5f9;
+	background-image: $topo-background;
+	&__links {
+		margin-top: -12%;
+	}
+}
+
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************       TABLET       ****************************************
+********************************************************************************************/
+@media only screen and (min-width: 732px) {
+	.SideLine__icons {
+		font-size: 2em;
+	}
+	.Link {
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 8%;
+		margin-bottom: 1%;
+	}
+	.triptic2-pages {
+		position: absolute;
+		top: -8vh;
+		left: 10vw;
+		width: 80vw;
+		opacity: 0.4;
+	}
+}
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************      DESKTOP   ****************************************
+********************************************************************************************/
+@media only screen and (min-width: 1130px) {
+	.SideLine__icons {
+		font-size: 2em;
+	}
+	.Link {
+		width: 70%;
+		margin-left: 15%;
+		margin-top: 6%;
+		margin-bottom: 2%;
+	}
+	.triptic2-pages {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50vw;
+		opacity: 0.4;
+	}
+}
