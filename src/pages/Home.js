@@ -362,24 +362,24 @@ function Home() {
 							<Triptic />
 						</div>
 						<div className='home__about__half__text'>
-							<div className='home__about__half__text__first   animate-home slide_from_right'>
+							<div className='home__about__half__text__first animate-home slide_from_right'>
 								I'm a freelance web developer based in Zurich, Switzerland. I
 								love creating animated web environments and generating
 								interactive user interfaces powered by modern technologies.
 							</div>
-							<div className='home__about__half__text__first'>
+							<div className='home__about__half__text__first animate-home slide_from_right'>
 								My back end awareness helps me to build full stack applications
 								including user authentification, database flows and server
 								communication.
 							</div>
-							<div className='home__about__half__text__second   animate-home slide_from_right'>
+							<div className='home__about__half__text__second animate-home slide_from_right'>
 								I’m currently looking for a junior Web development position
 								after 2 years of an enthusiastic programming learning journey. I
 								trained a lot using online courses, tutorials, offical
 								documentations and the most formative experience : building real
 								life projects.
 							</div>
-							<div className='home__about__half__text__second-last   animate-home slide_from_right'>
+							<div className='home__about__half__text__second-last animate-home slide_from_right'>
 								Now, I'm ready to share my motivation and knowledge with a
 								professional and dynamic team.
 							</div>

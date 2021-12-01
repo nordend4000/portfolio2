@@ -11,7 +11,7 @@ const DATA_MOREPROJECTS = [
 		subtitle:
 			"The current website you are looking at ! My Portfolio is designed using Figma and built with React and SASS. Animations are crafted using GSAP, SVG and Pixi.js. A Node.js server with Express handles the contact form submission.",
 		stackLine: <StackLine0 />,
-		linkGit: "https://github.com/nordend4000/romaingiouxportfolio",
+		linkGit: "https://github.com/nordend4000/portfolio2",
 		linkSite: "https://romaingioux.dev",
 		button: "View Portfolio",
 		img: "portfolio.png",

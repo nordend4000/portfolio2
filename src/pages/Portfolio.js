@@ -7,6 +7,7 @@ import DATA_PORTFOLIO from "../ressources/DATA_PORTFOLIO"
 import DATA_MOREPROJECTS from "../ressources/DATA_MOREPROJECTS"
 import TitleHover from "../components/TitleHover"
 import Polygone1 from "../ressources/Polygone1"
+
 import { Helmet } from "react-helmet"
 import "../styles/portfolio.scss"
 
@@ -20,20 +21,40 @@ function Portfolio() {
 	const createPanelsRefs = (panel, index) => {
 		panels.current[index] = panel
 	}
-	console.log(window.innerWidth)
-	console.log(mobile)
-
+	const checkMobileBrowser = () => {
+		if (detectMob()) {
+			setMobile(true)
+		} else {
+			setMobile(false)
+		}
+	}
+	window.addEventListener("resize", checkMobileBrowser)
 	useEffect(() => {
-		if (window.innerWidth < 520) {
+		if (detectMob()) {
 			setMobile(true)
 		} else {
 			setMobile(false)
 		}
 	}, [])
 
+	function detectMob() {
+		const toMatch = [
+			/Android/i,
+			/webOS/i,
+			/iPhone/i,
+			/iPad/i,
+			/iPod/i,
+			/BlackBerry/i,
+			/Windows Phone/i,
+		]
+		return toMatch.some(toMatchItem => {
+			return navigator.userAgent.match(toMatchItem)
+		})
+	}
+
 	//HORIZONTAL SCROLLING
 	useLayoutEffect(() => {
-		if (window.innerWidth < 520) return
+		if (detectMob()) return
 		const totalPanels = panels.current.length
 		gsap.to(panels.current, {
 			xPercent: -100 * (totalPanels - 1),
@@ -53,7 +74,7 @@ function Portfolio() {
 				stId.kill()
 			}
 		}
-	}, [])
+	}, [mobile])
 
 	// ANIMATE MORE PROJECTS
 	useLayoutEffect(() => {
@@ -79,19 +100,16 @@ function Portfolio() {
 				stId2.kill()
 			}
 		}
-	}, [])
+	}, [mobile])
 
 	const hide = elem => {
 		gsap.set(elem, { autoAlpha: 0 })
 	}
-
 	const animateFromTo = (elem, direction) => {
 		const offset = 1000
 		let x = 0
 		let y = direction * offset
-
 		direction = direction | 1
-
 		if (elem.classList.contains("slide_from_left")) {
 			x = -offset
 			y = 0
@@ -99,7 +117,6 @@ function Portfolio() {
 			x = offset
 			y = 0
 		}
-
 		gsap.fromTo(
 			elem,
 			{ x: x, y: y, autoAlpha: 0 },
@@ -131,7 +148,6 @@ function Portfolio() {
 				<meta name='author' content='Romain Gioux' />
 			</Helmet>
 			<div
-				//className='xcontainer Portfolio'
 				className={mobile ? "mobile-col Portfolio" : "xcontainer Portfolio"}
 				ref={panelsContainer}>
 				<div className='xpanel' ref={e => createPanelsRefs(e, 0)}>

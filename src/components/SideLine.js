@@ -29,7 +29,7 @@ function SideLine() {
 				<AiOutlineMail className='SideLine__icons' />
 			</Link>
 			<a
-				href={"https://github.com/nordend4000/"}
+				href={"https://www.linkedin.com/in/romain-gioux/"}
 				target='_blank'
 				rel='noreferrer'>
 				<AiFillLinkedin className='SideLine__icons' />
