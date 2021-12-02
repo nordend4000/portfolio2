@@ -113,7 +113,10 @@ function Skills() {
 						<div className='panel__text white-text'>FRONT END</div>
 						<div className='panel__text-undeline red-light-text'>
 							<p>User Experience </p> <p>SEO</p>
-							<p>Performance</p> <p>Design</p>
+							<p>Performance</p>
+						</div>
+						<div className='panel__text-undeline red-light-text'>
+							<p>Design</p>
 							<p>Accessibility</p> <p>Testing</p>
 						</div>
 						<div className='Stars-container'>

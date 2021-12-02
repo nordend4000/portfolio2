@@ -10,6 +10,7 @@
 	align-items: center;
 	width: 100%;
 	height: 100%;
+	padding-bottom: 5%;
 }
 
 .xcontainer {
@@ -21,7 +22,7 @@
 .Portfolio {
 	background-color: #f7f5f9;
 	background-image: $topo-background;
-	padding-bottom: 5%;
+
 	overflow-x: hidden;
 	&__landing {
 		display: flex;
@@ -178,7 +179,6 @@
 ********************************************************************************************/
 @media only screen and (max-width: 332px) {
 	.Portfolio {
-		padding-bottom: 5%;
 		&__project {
 			height: 100vh;
 			margin-left: 15%;
@@ -347,7 +347,6 @@
 	.Portfolio {
 		background-color: white;
 		background-image: $topo-background;
-
 		&__project {
 			height: 100vh;
 			margin-left: 12%;
