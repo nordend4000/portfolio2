@@ -6,7 +6,6 @@
 	font-weight: 500;
 	background-color: #f7f5f9;
 	background-image: $topo-background;
-	height: 100%;
 	border: 1px solid transparent;
 	margin: 0;
 	padding: 0;
@@ -14,6 +13,8 @@
 	background-color: #f7f5f9;
 	background-image: $topo-background;
 	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
 	h2 {
 		font-family: "ShadowsIntoLight";
 		font-weight: 700;
@@ -35,8 +36,8 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		width: 100%;
 		height: 100vh;
+		width: 100%;
 		&__box1 {
 			width: 100%;
 			& h1 {
@@ -63,7 +64,6 @@
 		}
 		&__box2 {
 			font-weight: 500;
-			/*background-color: #7382a253;*/
 			background-color: #9cb8cc7c;
 			border-radius: 10px;
 			font-size: 0.7rem;
@@ -139,8 +139,9 @@
 	}
 
 	&__send {
-		width: 40%;
+		width: 60%;
 		margin: 5% 30%;
+		margin-left: 20%;
 		text-align: center;
 		margin-top: 10%;
 		&__btn {
@@ -196,9 +197,11 @@
 	justify-content: center;
 	align-content: center;
 	color: var(--main-darker);
+	padding-left: 10%;
 	padding-top: 12%;
 	letter-spacing: 1.5px;
 	font-size: 0.7em;
+	text-align: center;
 }
 .Contact-subtitle {
 	display: flex;
@@ -211,8 +214,24 @@
 	letter-spacing: 2.4px;
 	font-weight: 600;
 	padding-top: 2%;
+	text-align: center;
+	padding-left: 10%;
 }
-
+.sending-email {
+	display: flex;
+	justify-content: center;
+}
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************     EXTAR SMALL     ****************************************
+********************************************************************************************/
+@media only screen and (max-width: 332px) {
+	.Contact__landing__box2 {
+		line-height: 18px;
+		font-size: 0.6em;
+	}
+}
 /******************************************************************************************
 ********************************   MEDIA QUERIES   ****************************************
 ********************************************************************************************
@@ -321,6 +340,7 @@
 		padding-top: 1%;
 		letter-spacing: 1.5px;
 		font-size: 1em;
+		padding-left: 0%;
 	}
 	.Contact-subtitle {
 		display: flex;
@@ -333,6 +353,7 @@
 		letter-spacing: 2.4px;
 		font-weight: 600;
 		padding-top: 2%;
+		padding-left: 0%;
 	}
 }
 

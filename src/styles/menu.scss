@@ -10,7 +10,6 @@
 	clip-path: circle(100%);
 	background-color: #9cb8cc;
 	background-image: $topo-background-menu;
-
 	&__link {
 		color: var(--sec-dark);
 		font-size: 3em;
@@ -25,8 +24,6 @@
 }
 .active-open {
 	border: 1px solid var(--sec-dark);
-}
-.header {
 }
 /*-----------------  LOGO  -----------------------------*/
 .logo-svg svg {

@@ -22,18 +22,13 @@
 html {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	/*min-height: -webkit-fill-available;*/
 }
 body,
 .app {
 	color: var(--dark-color);
 	background: white;
-	/*overflow-x: hidden;*/
+	overflow-x: hidden;
 	font-family: "Raleway", arial, helvetica, sans-serif;
-	/*width: 100vw;
-	min-height: 100vh;*/
-	/* mobile viewport bug fix */
-	/*min-height: -webkit-fill-available; */
 }
 .bolder {
 	font-weight: bold;

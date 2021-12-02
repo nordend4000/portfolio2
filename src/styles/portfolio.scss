@@ -21,13 +21,15 @@
 .Portfolio {
 	background-color: #f7f5f9;
 	background-image: $topo-background;
+	padding-bottom: 5%;
+	overflow-x: hidden;
 	&__landing {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
 		height: 100vh;
-		margin-left: 10%;
+		margin-left: 5%;
 		& h1 {
 			font-family: "ShadowsIntoLight";
 			font-size: 5em;
@@ -88,11 +90,11 @@
 					background-color: #f49a9841;
 					color: #dc6969;
 					font-family: "ShadowsIntoLight";
-					letter-spacing: 1.2px;
-					font-size: 0.8em;
+					letter-spacing: 1px;
+					font-size: 0.7em;
 					border: solid 1px #dc6969;
 					border-radius: 20px;
-					padding: 2px 30px;
+					padding: 2px 20px;
 					box-shadow: 2px 4px 8px #f49a9870;
 					transition: 0.3s ease-out;
 					margin: 4% auto;
@@ -154,10 +156,11 @@
 	&__want {
 		font-family: "ShadowsIntoLight";
 		font-weight: 300;
+		font-size: 0.6rem;
 		letter-spacing: 1.5px;
-		color: var(--sec-dark);
+		color: var(--main-dark);
 		margin-top: 12%;
-		padding-bottom: 18%;
+		padding-bottom: 2%;
 		padding-right: 10px;
 		margin-left: 10%;
 		text-align: center;
@@ -167,6 +170,44 @@
 .fifty {
 	width: 60%;
 	margin-bottom: 5%;
+}
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************     EXTAR SMALL     ****************************************
+********************************************************************************************/
+@media only screen and (max-width: 332px) {
+	.Portfolio {
+		padding-bottom: 5%;
+		&__project {
+			height: 100vh;
+			margin-left: 15%;
+			&__text {
+				& h3 {
+					font-size: 1.3em;
+					margin-bottom: 1%;
+				}
+				& h5 {
+					color: var(--sec-dark);
+					font-size: 0.9em;
+					width: 100%;
+					margin: 2% auto;
+				}
+				& p {
+					font-size: 0.6em;
+					line-height: 16px;
+					letter-spacing: 1.1px;
+					padding-right: 15px;
+				}
+			}
+		}
+	}
+	.Moreprojects {
+		&__want {
+			font-size: 0.4em;
+			padding-bottom: 3%;
+		}
+	}
 }
 /******************************************************************************************
 ********************************   MEDIA QUERIES   ****************************************
@@ -282,7 +323,7 @@
 .Moreprojects {
 	&__want {
 		letter-spacing: 1.5px;
-		font-size: 3rem;
+		font-size: 1.8em;
 		margin-top: 5%;
 		padding-bottom: 12%;
 		word-spacing: 10px;
@@ -407,6 +448,15 @@
 					}
 				}
 			}
+		}
+	}
+	.Moreprojects {
+		&__want {
+			letter-spacing: 1.5px;
+			font-size: 3.5em;
+			margin-top: 5%;
+			padding-bottom: 12%;
+			word-spacing: 10px;
 		}
 	}
 }

@@ -1,7 +1,6 @@
 import React, { useLayoutEffect, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Landing from "../components/Landing"
-import Polygone1 from "../ressources/Polygone1"
 import Triptic from "../ressources/Triptic"
 import Arrow from "../ressources/Arrow"
 import ChevronLeft from "../ressources/ChevronLeft"
@@ -155,10 +154,13 @@ function Home() {
 							orders, customers & products.
 						</div>
 						<div className='home__featured__text__polygone1'>
-							<Polygone1 />
+							<img
+								src={process.env.PUBLIC_URL + "/images/polygone-topo.png"}
+								alt='polygone topographic shape for background'
+							/>
 						</div>
 					</div>
-					<div className='home__featured__buttons animate-home slide_from_right'>
+					<div className='home__featured__buttons animate-home slide_from_left'>
 						<a
 							href={
 								"https://github.com/nordend4000/rebecca-anderson-photography"
@@ -211,7 +213,10 @@ function Home() {
 								local communities.
 							</div>
 							<div className='home__projects__proj__polygone'>
-								<Polygone1 />
+								<img
+									src={process.env.PUBLIC_URL + "/images/polygone-topo.png"}
+									alt='polygone topographic shape for background'
+								/>
 							</div>
 						</div>
 						<img
@@ -249,7 +254,10 @@ function Home() {
 								upcomming trips using an interactive map.
 							</div>
 							<div className='home__projects__proj__polygone'>
-								<Polygone1 />
+								<img
+									src={process.env.PUBLIC_URL + "/images/polygone-topo.png"}
+									alt='polygone topographic shape for background'
+								/>
 							</div>
 						</div>
 						<img
@@ -287,7 +295,10 @@ function Home() {
 								flying trace on the map.
 							</div>
 							<div className='home__projects__proj__polygone'>
-								<Polygone1 />
+								<img
+									src={process.env.PUBLIC_URL + "/images/polygone-topo.png"}
+									alt='polygone topographic shape for background'
+								/>
 							</div>
 						</div>
 						<img

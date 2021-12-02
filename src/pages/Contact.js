@@ -19,6 +19,7 @@ function Contact() {
 	const [error, setError] = useState("")
 	const [answer, setAnswer] = useState("")
 	const [humanVerified, setHumanVerified] = useState(false)
+	const [sending, setSending] = useState(false)
 
 	const contactTripticRef = useRef()
 	const contactRef = useRef()
@@ -109,6 +110,12 @@ function Contact() {
 			)
 			return
 		}
+		if (!humanVerified) {
+			return setMessageChecked(
+				"Please use Recaptcha to verify your a real Human !",
+			)
+		}
+		setSending(true)
 		await Axios({
 			method: "POST",
 			data: {
@@ -125,6 +132,7 @@ function Contact() {
 			) {
 				setError(res.data)
 				setAnswer("")
+				setSending(false)
 			}
 			if (
 				res.data ===
@@ -135,6 +143,7 @@ function Contact() {
 				setName("")
 				setEmail("")
 				setMessage("")
+				setSending(false)
 			}
 		})
 	}
@@ -225,11 +234,20 @@ function Contact() {
 					onloadCallback={onloadCallback}
 				/>
 			</div>
-			{(answer || error) && (
-				<div className=''>
-					{answer && <div className='Contact__answer'>{answer}</div>}
-					{error && <div className='Contact__error'>{error}</div>}
+			{sending ? (
+				<div className='sending-email'>
+					<img
+						alt='sending email animation'
+						src={process.env.PUBLIC_URL + `/images/loading.svg`}
+					/>
 				</div>
+			) : (
+				(answer || error) && (
+					<div className=''>
+						{answer && <div className='Contact__answer'>{answer}</div>}
+						{error && <div className='Contact__error'>{error}</div>}
+					</div>
+				)
 			)}
 			<div className='Contact__send'>
 				<div className='Contact__form__check'>{formChecked}</div>

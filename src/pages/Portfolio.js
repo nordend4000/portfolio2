@@ -6,7 +6,6 @@ import FooterLinks from "../components/FooterLinks"
 import DATA_PORTFOLIO from "../ressources/DATA_PORTFOLIO"
 import DATA_MOREPROJECTS from "../ressources/DATA_MOREPROJECTS"
 import TitleHover from "../components/TitleHover"
-import Polygone1 from "../ressources/Polygone1"
 
 import { Helmet } from "react-helmet"
 import "../styles/portfolio.scss"
@@ -15,6 +14,8 @@ function Portfolio() {
 	const [mobile, setMobile] = useState(true)
 	const panels = useRef([])
 	const panelsContainer = useRef()
+
+	let isMobile = detectMob()
 
 	gsap.registerPlugin(ScrollTrigger)
 
@@ -30,12 +31,12 @@ function Portfolio() {
 	}
 	window.addEventListener("resize", checkMobileBrowser)
 	useEffect(() => {
-		if (detectMob()) {
+		if (isMobile) {
 			setMobile(true)
 		} else {
 			setMobile(false)
 		}
-	}, [])
+	}, [isMobile])
 
 	function detectMob() {
 		const toMatch = [
@@ -54,7 +55,7 @@ function Portfolio() {
 
 	//HORIZONTAL SCROLLING
 	useLayoutEffect(() => {
-		if (detectMob()) return
+		if (isMobile) return
 		const totalPanels = panels.current.length
 		gsap.to(panels.current, {
 			xPercent: -100 * (totalPanels - 1),
@@ -74,7 +75,7 @@ function Portfolio() {
 				stId.kill()
 			}
 		}
-	}, [mobile])
+	}, [mobile, isMobile])
 
 	// ANIMATE MORE PROJECTS
 	useLayoutEffect(() => {
@@ -216,7 +217,9 @@ function Portfolio() {
 				))}
 			</div>
 			<div className='Moreprojects'>
-				<div className='Moreprojects__want'>Want to see more projects ?</div>
+				<div className='Moreprojects__want'>
+					<p>Want to see more projects ?</p>
+				</div>
 				{DATA_MOREPROJECTS.map(el => (
 					<div key={el.index}>
 						<div className='home__projects__half animate-moreprojects slide_from_left'>
@@ -226,7 +229,10 @@ function Portfolio() {
 									{el.subtitle}
 								</div>
 								<div className='home__projects__proj__polygone'>
-									<Polygone1 />
+									<img
+										src={process.env.PUBLIC_URL + "/images/polygone-topo.png"}
+										alt='polygone topographic shape for background'
+									/>
 								</div>
 								<div className='fifty'>{el.stackLine}</div>
 							</div>

@@ -103,6 +103,7 @@
 		font-size: 0.9em;
 	}
 	&__featured {
+		padding-top: 6%;
 		&__text {
 			position: relative;
 			top: 50%;
@@ -118,9 +119,9 @@
 			&__subtitle {
 				color: var(--main-darker);
 				width: 60%;
-				font-size: 1em;
+				font-size: 0.9em;
 				margin-bottom: 20px;
-				line-height: 30px;
+				line-height: 26px;
 				font-weight: 400;
 			}
 			&__polygone1 {
@@ -128,7 +129,7 @@
 				height: auto;
 				position: absolute;
 				top: -20%;
-				left: -40%;
+				left: -30%;
 				z-index: -1;
 			}
 		}
@@ -155,10 +156,10 @@
 				color: #dc6969;
 				font-family: "ShadowsIntoLight";
 				letter-spacing: 1px;
-				font-size: 0.8em;
+				font-size: 0.7em;
 				border: solid 1px #dc6969;
 				border-radius: 20px;
-				padding: 3px 30px;
+				padding: 2px 20px;
 				box-shadow: 2px 4px 8px #f49a9870;
 				transition: 0.3s ease-out;
 				margin: 2% auto;
@@ -190,9 +191,9 @@
 			&__subtitle {
 				color: var(--main-darker);
 				width: 60%;
-				font-size: 1em;
+				font-size: 0.9em;
 				margin-bottom: 20px;
-				line-height: 30px;
+				line-height: 26px;
 				font-weight: 500;
 			}
 			&__polygone {
@@ -232,7 +233,7 @@
 				font-size: 0.8em;
 				border: solid 1px #dc6969;
 				border-radius: 20px;
-				padding: 3px 30px;
+				padding: 2px 20px;
 				box-shadow: 2px 4px 8px #f49a9870;
 				transition: 0.3s ease-out;
 				margin: 2% auto;
@@ -457,6 +458,18 @@
 					z-index: -1;
 				}
 			}
+			&__visuel {
+				display: flex;
+				justify-content: flex-end;
+				height: auto;
+				width: 80%;
+				margin-left: 20%;
+				object-fit: contain;
+				margin-bottom: 1%;
+				position: relative;
+				top: 0vh;
+				z-index: 0;
+			}
 			&__buttons {
 				width: 60%;
 				margin-left: 30%;
@@ -479,18 +492,6 @@
 					box-shadow: 1px 1px 2px #f49a9870;
 					transition: 0.2s ease-in;
 				}
-			}
-			&__visuel {
-				display: flex;
-				justify-content: flex-end;
-				height: auto;
-				width: 80%;
-				margin-left: 20%;
-				object-fit: contain;
-				margin-bottom: 1%;
-				position: relative;
-				top: 0vh;
-				z-index: 0;
 			}
 		}
 		&__projects {
@@ -548,11 +549,11 @@
 					background-color: #f49a9841;
 					color: #dc6969;
 					font-family: "ShadowsIntoLight";
-					letter-spacing: 1.2px;
-					font-size: 1em;
+					letter-spacing: 1.1px;
+					font-size: 0.9em;
 					border: solid 1px #dc6969;
 					border-radius: 20px;
-					padding: 4px 40px;
+					padding: 3px 30px;
 					box-shadow: 2px 4px 8px #f49a9870;
 					transition: 0.3s ease-out;
 					margin: 2% auto;
@@ -737,13 +738,14 @@
 			background-position: right;
 			background-size: cover;
 			background-repeat: no-repeat;
-			margin-top: -15%;
+			margin-top: -10%;
 			margin-bottom: 2%;
+
 			&__text {
 				position: relative;
 				top: 0px;
-				left: 18vw;
-				margin-top: 15%;
+				left: 12vw;
+				margin-top: 1%;
 				&__title {
 					font-size: 1.9em;
 					letter-spacing: 2.6px;
@@ -774,7 +776,7 @@
 				flex-direction: row;
 				justify-content: flex-start;
 				margin-bottom: 0%;
-				margin-top: 6%;
+				margin-top: 3%;
 				&__btn {
 					letter-spacing: 1.2px;
 					font-size: 1.2em;

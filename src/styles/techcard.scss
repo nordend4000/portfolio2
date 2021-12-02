@@ -26,7 +26,7 @@
 	backdrop-filter: blur(5px);
 }
 .container .card .content {
-	padding: 20px;
+	padding: 12px;
 	text-align: center;
 	transition: 0.5s;
 }
@@ -42,17 +42,17 @@
 .container .card .content h3 {
 	text-align: left;
 	margin-left: 5%;
-	font-size: 3em;
+	font-size: 2em;
 	color: var(--main-dark);
 	font-family: "ShadowsIntoLight";
 	letter-spacing: 3px;
 }
 .container .card .content p {
-	font-size: 1.1em;
+	font-size: 0.9em;
 	font-weight: 500;
 	margin: 20px 10px;
 	color: var(--main-darker);
-	line-height: 28px;
+	line-height: 22px;
 }
 .container .card .content a {
 	position: relative;
