@@ -16,7 +16,7 @@ import "./styles/styles.scss"
 
 function App() {
 	return (
-		<>
+		<div className='wrap'>
 			<BrowserRouter>
 				<Helmet>
 					<title>Romain GIOUX - Portfolio</title>
@@ -47,7 +47,7 @@ function App() {
 					<Footer />
 				</div>
 			</BrowserRouter>
-		</>
+		</div>
 	)
 }
 

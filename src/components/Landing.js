@@ -66,7 +66,8 @@ function Landing() {
 		const app = new PIXI.Application({
 			view: document.querySelector(".orb-canvas"),
 			resizeTo: window,
-			transparent: true,
+			//transparent: true,
+			backgroundAlpha: false,
 		})
 		app.stage.filters = [new KawaseBlurFilter(30, 10, true)]
 		const orbs = []

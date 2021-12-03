@@ -1,5 +1,4 @@
 #arrow {
-	cursor: pointer;
 	font-family: "ShadowsIntoLight";
 	color: var(--sec-dark);
 	transition: ease-in 0.5s;
