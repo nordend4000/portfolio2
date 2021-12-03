@@ -170,7 +170,9 @@
 	.Portfolio {
 		&__project {
 			height: 100vh;
-			margin-left: 15%;
+			margin-left: 1%;
+			width: 90%;
+			padding-bottom: 8%;
 			&__text {
 				& h3 {
 					font-size: 1.3em;
@@ -224,7 +226,6 @@
 			flex-direction: row;
 			align-items: center;
 			padding-bottom: 0%;
-
 			&__text {
 				width: 50%;
 				& h3 {

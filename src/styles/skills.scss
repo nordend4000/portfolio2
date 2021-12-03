@@ -55,8 +55,8 @@
 }
 .panel {
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 40%;
+	left: 55%;
 	transform: translate(-50%, -50%);
 	color: white;
 	padding: 2% 10%;
@@ -204,6 +204,37 @@
 	.skills-landing__box2 {
 		line-height: 18px;
 		font-size: 0.6em;
+	}
+	.panel {
+		position: absolute;
+		top: 40%;
+		left: 60%;
+		transform: translate(-50%, -50%);
+		&__text {
+			font-size: 2.5em;
+			letter-spacing: 2.3px;
+		}
+		&__text-undeline {
+			font-weight: 500;
+			font-size: 0.8rem;
+
+			margin-bottom: 8%;
+			letter-spacing: 2px;
+			line-height: 20px;
+		}
+	}
+	.Stars {
+		&__title {
+			padding-right: 20px;
+			padding-left: 20px;
+			font-family: "ShadowsIntoLight";
+			font-size: 0.8em;
+			letter-spacing: 1.2px;
+		}
+		&__icons {
+			margin-right: 8px;
+			display: flex;
+		}
 	}
 }
 /******************************************************************************************

@@ -117,24 +117,32 @@ function Home() {
 			<Landing />
 			<div className='home'>
 				<div className='home__welcome'>
-					<p>
-						Welcome to my space, I'm <b> Romain GIOUX </b> a French Web
-						Developer lost in Switzerland.
-					</p>
-					<p>
-						You will find on this website a portfolio of the web{" "}
-						<b> Projects </b> I created and several sections about my coding{" "}
-						<b> Skills</b>, <b> Background </b>
-						and <b> Resume </b>.{" "}
-					</p>
-					<p>
-						Finally a <b> Contact </b> form will allow you to share your thought
-						and get in touch with me.
-					</p>
-					<p>
-						I'm currently looking for <b> new opportunities </b> as Web
-						Developer and any freelancing project.
-					</p>
+					<div className='home__welcome__photo'>
+						<img
+							src={process.env.PUBLIC_URL + "/images/ro.jpg"}
+							alt='Romain GIOUX Web Developer'
+						/>
+					</div>
+					<div className='home__welcome__text'>
+						<p>
+							Welcome to my space, I'm <b> Romain GIOUX </b> a French Web
+							Developer lost in Switzerland.
+						</p>
+						<p>
+							You will find on this website a portfolio of the web{" "}
+							<b> Projects </b> I created and several sections about my coding{" "}
+							<b> Skills</b>, <b> Background </b>
+							and <b> Resume </b>.{" "}
+						</p>
+						<p>
+							Finally a <b> Contact </b> form will allow you to share your
+							thought and get in touch with me.
+						</p>
+						<p>
+							I'm currently looking for <b> new opportunities </b> as Web
+							Developer and any freelancing project.
+						</p>
+					</div>
 				</div>
 				<div className='home__arrow'>
 					<Arrow link='Latest Project' css='arrow-large' />

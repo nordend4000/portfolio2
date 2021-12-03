@@ -81,7 +81,7 @@
 .layered-waves svg {
 	position: absolute;
 	top: 100vh;
-	width: 100vw;
+	width: 100%;
 	height: auto;
 	z-index: 0;
 }
@@ -92,15 +92,34 @@
 	left: 0;
 	width: 100vw;
 	&__welcome {
-		color: var(--main-darker);
-		width: 80%;
-		line-height: 30px;
-		letter-spacing: 1.3px;
-		margin-top: 3%;
-		margin-bottom: 5%;
-		margin-left: 12%;
-		font-weight: 500;
-		font-size: 0.9em;
+		display: flex;
+		align-items: center;
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		margin-top: 2%;
+		margin-bottom: 2%;
+		&__photo {
+			width: 40%;
+			margin-bottom: 5%;
+			margin-top: 3%;
+		}
+		&__photo img {
+			width: 100%;
+			border-radius: 15%;
+			border: 2px solid var(--main-dark);
+			box-shadow: 6px 6px 4px #3c637d70;
+		}
+		& p {
+			color: var(--main-darker);
+			width: 75%;
+			line-height: 24px;
+			letter-spacing: 1.2px;
+			margin-top: 0%;
+			margin-bottom: 3%;
+			margin-left: 20%;
+			font-weight: 500;
+			font-size: 0.8em;
+		}
 	}
 	&__featured {
 		padding-top: 6%;
@@ -362,7 +381,31 @@
 		}
 	}
 }
-
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************     EXTAR SMALL     ****************************************
+********************************************************************************************/
+@media only screen and (max-width: 332px) {
+	.Landing {
+		&__text {
+			&__title {
+				font-size: 2em;
+				font-weight: 700;
+				line-height: 48px;
+				word-spacing: 1px;
+				letter-spacing: 4px;
+			}
+			&__subtitle {
+				font-size: 0.9em;
+				font-weight: 500;
+				letter-spacing: 1.4px;
+				margin: 10% auto;
+				line-height: 24px;
+			}
+		}
+	}
+}
 /******************************************************************************************
 ********************************   MEDIA QUERIES   ****************************************
 ********************************************************************************************
@@ -420,15 +463,34 @@
 		left: 0;
 		width: 100vw;
 		&__welcome {
-			color: var(--main-darker);
-			width: 80%;
-			line-height: 34px;
-			letter-spacing: 1.5px;
-			margin-top: 3%;
-			margin-bottom: 5%;
-			margin-left: 12%;
-			font-weight: 500;
-			font-size: 0.9em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			margin-top: 2%;
+			margin-bottom: 2%;
+			&__photo {
+				width: 40%;
+				margin-bottom: 0%;
+				margin-left: 10%;
+				margin-top: 0%;
+			}
+			&__photo img {
+				width: 100%;
+				border-radius: 15%;
+				border: 2px solid var(--main-dark);
+				box-shadow: 6px 6px 4px #3c637d70;
+			}
+			& p {
+				color: var(--main-darker);
+				width: 80%;
+				line-height: 34px;
+				letter-spacing: 1.5px;
+				margin-top: 0%;
+				margin-bottom: 0%;
+				margin-left: 12%;
+				font-weight: 500;
+			}
 		}
 		&__featured {
 			&__text {
@@ -724,14 +786,33 @@
 		left: 0;
 		width: 100vw;
 		&__welcome {
-			color: var(--main-darker);
-			width: 80%;
-			line-height: 35px;
-			letter-spacing: 1.7px;
-			margin-top: 3%;
-			margin-bottom: 5%;
-			margin-left: 12%;
-			font-weight: 500;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			margin-top: 5%;
+			margin-bottom: 2%;
+			&__photo {
+				width: 25%;
+				margin-bottom: 0%;
+				margin-top: 0%;
+			}
+			&__photo img {
+				width: 100%;
+				border-radius: 15%;
+				border: 2px solid var(--main-dark);
+				box-shadow: 6px 6px 4px #3c637d70;
+			}
+			& p {
+				color: var(--main-darker);
+				width: 80%;
+				line-height: 38px;
+				letter-spacing: 1.7px;
+				margin-top: 0%;
+				margin-bottom: 0%;
+				margin-left: 12%;
+				font-weight: 500;
+			}
 		}
 		&__featured {
 			height: 120vh;
