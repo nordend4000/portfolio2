@@ -88,9 +88,7 @@ function About() {
 		const offset = 1000
 		let x = 0
 		let y = direction * offset
-
 		direction = direction | 1
-
 		if (elem.classList.contains("slide_from_left")) {
 			x = -offset
 			y = 0
@@ -98,7 +96,6 @@ function About() {
 			x = offset
 			y = 0
 		}
-
 		gsap.fromTo(
 			elem,
 			{ x: x, y: y, autoAlpha: 0 },

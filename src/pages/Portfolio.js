@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useLayoutEffect } from "react"
+import React, { useRef, useLayoutEffect } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import TripticProject from "../ressources/TripticProject"
@@ -11,51 +11,16 @@ import { Helmet } from "react-helmet"
 import "../styles/portfolio.scss"
 
 function Portfolio() {
-	const [mobile, setMobile] = useState(true)
 	const panels = useRef([])
 	const panelsContainer = useRef()
-
-	let isMobile = detectMob()
 
 	gsap.registerPlugin(ScrollTrigger)
 
 	const createPanelsRefs = (panel, index) => {
 		panels.current[index] = panel
 	}
-	const checkMobileBrowser = () => {
-		if (detectMob()) {
-			setMobile(true)
-		} else {
-			setMobile(false)
-		}
-	}
-	window.addEventListener("resize", checkMobileBrowser)
-	useEffect(() => {
-		if (isMobile) {
-			setMobile(true)
-		} else {
-			setMobile(false)
-		}
-	}, [isMobile])
-
-	function detectMob() {
-		const toMatch = [
-			/Android/i,
-			/webOS/i,
-			/iPhone/i,
-			/iPad/i,
-			/iPod/i,
-			/BlackBerry/i,
-			/Windows Phone/i,
-		]
-		return toMatch.some(toMatchItem => {
-			return navigator.userAgent.match(toMatchItem)
-		})
-	}
-
 	//HORIZONTAL SCROLLING
 	useLayoutEffect(() => {
-		if (isMobile) return
 		const totalPanels = panels.current.length
 		gsap.to(panels.current, {
 			xPercent: -100 * (totalPanels - 1),
@@ -75,8 +40,7 @@ function Portfolio() {
 				stId.kill()
 			}
 		}
-	}, [mobile, isMobile])
-
+	}, [])
 	// ANIMATE MORE PROJECTS
 	useLayoutEffect(() => {
 		gsap.utils.toArray(".animate-moreprojects").forEach(function (elem) {
@@ -101,7 +65,7 @@ function Portfolio() {
 				stId2.kill()
 			}
 		}
-	}, [mobile])
+	}, [])
 
 	const hide = elem => {
 		gsap.set(elem, { autoAlpha: 0 })
@@ -148,9 +112,7 @@ function Portfolio() {
 				/>
 				<meta name='author' content='Romain Gioux' />
 			</Helmet>
-			<div
-				className={mobile ? "mobile-col Portfolio" : "xcontainer Portfolio"}
-				ref={panelsContainer}>
+			<div className='xcontainer Portfolio' ref={panelsContainer}>
 				<div className='xpanel' ref={e => createPanelsRefs(e, 0)}>
 					<div>
 						<TitleHover
