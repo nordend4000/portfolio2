@@ -4,9 +4,8 @@ import { gsap } from "gsap"
 import { AiFillGithub } from "react-icons/ai"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiOutlineMail } from "react-icons/ai"
-import { SiToptal } from "react-icons/si"
-import { SiFiverr } from "react-icons/si"
-import { SiUpwork } from "react-icons/si"
+import { IoDocumentTextOutline } from "react-icons/io5"
+import PDF_EN from "../ressources/cv-en.pdf"
 
 function SideLine() {
 	const sideline = useRef()
@@ -25,24 +24,33 @@ function SideLine() {
 				romaingiouxdev@gmail.com
 			</Link>
 			<div className='SideLine__line'></div>
-			<Link to='/contact'>
-				<AiOutlineMail className='SideLine__icons' />
-			</Link>
+			<div className='tooltip'>
+				<Link to='/contact'>
+					<AiOutlineMail className='SideLine__icons' />
+					<span class='tooltiptext'>Contact</span>
+				</Link>
+			</div>
 			<a
+				className='tooltip'
 				href={"https://www.linkedin.com/in/romain-gioux/"}
 				target='_blank'
 				rel='noreferrer'>
 				<AiFillLinkedin className='SideLine__icons' />
+				<span class='tooltiptext'>LinkedIn</span>
 			</a>
 			<a
+				className='tooltip'
 				href={"https://github.com/nordend4000/"}
 				target='_blank'
 				rel='noreferrer'>
 				<AiFillGithub className='SideLine__icons' />
+				<span class='tooltiptext'>Git Hub</span>
 			</a>
-			<SiToptal className='SideLine__icons' />
-			<SiFiverr className='SideLine__icons' />
-			<SiUpwork className='SideLine__icons' />
+			<a href={PDF_EN} target='_blank' rel='noreferrer' className='tooltip'>
+				<IoDocumentTextOutline className='SideLine__icons' />
+				<span class='tooltiptext'>Resume</span>
+			</a>
+
 			<div className='SideLine__line'></div>
 		</div>
 	)
