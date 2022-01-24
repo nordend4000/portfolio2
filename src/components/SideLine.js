@@ -27,7 +27,7 @@ function SideLine() {
 			<div className='tooltip'>
 				<Link to='/contact'>
 					<AiOutlineMail className='SideLine__icons' />
-					<span class='tooltiptext'>Contact</span>
+					<span className='tooltiptext'>Contact</span>
 				</Link>
 			</div>
 			<a
@@ -36,7 +36,7 @@ function SideLine() {
 				target='_blank'
 				rel='noreferrer'>
 				<AiFillLinkedin className='SideLine__icons' />
-				<span class='tooltiptext'>LinkedIn</span>
+				<span className='tooltiptext'>LinkedIn</span>
 			</a>
 			<a
 				className='tooltip'
@@ -44,11 +44,11 @@ function SideLine() {
 				target='_blank'
 				rel='noreferrer'>
 				<AiFillGithub className='SideLine__icons' />
-				<span class='tooltiptext'>Git Hub</span>
+				<span className='tooltiptext'>Git Hub</span>
 			</a>
 			<a href={PDF_EN} target='_blank' rel='noreferrer' className='tooltip'>
 				<IoDocumentTextOutline className='SideLine__icons' />
-				<span class='tooltiptext'>Resume</span>
+				<span className='tooltiptext'>Resume</span>
 			</a>
 
 			<div className='SideLine__line'></div>

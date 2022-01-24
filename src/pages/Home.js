@@ -212,8 +212,8 @@ function Home() {
 					<div className='home__arrow'>
 						<Arrow link='More Projects' css='arrow-large' />
 					</div>
-					{DATA_PROJECT_HOME.map(project => (
-						<>
+					{DATA_PROJECT_HOME.map((project, index) => (
+						<div key={index}>
 							<div className='home__projects__half  animate-home slide_from_left'>
 								<div className='home__projects__proj'>
 									<div className='home__projects__proj__title'>
@@ -247,7 +247,7 @@ function Home() {
 									</button>
 								</a>
 							</div>
-						</>
+						</div>
 					))}
 					<div className='home__projects__large-button'>
 						<Link to='/portfolio'>
