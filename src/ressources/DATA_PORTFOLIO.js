@@ -1,8 +1,8 @@
 import StackLine1 from "./StackLine1"
 import StackLine2 from "./StackLine2"
 import StackLine3 from "./StackLine3"
-import StackLine4 from "./StackLine4"
 import StackLine5 from "./StackLine5"
+import StackLine10 from "./StackLine10"
 
 const DATA_PORTFOLIO = [
 	{
@@ -43,7 +43,25 @@ const DATA_PORTFOLIO = [
 	},
 	{
 		index: 3,
-		title: "Logbook Application",
+		title: "Weather App",
+		subtitleP1: "Next.js Application fetching data from OpenWeather API. ",
+		subtitleP2:
+			"Click on the searching map to get the weather anywhere in the world and check out the latest weather maps for precipitation, temperature, wind, pressure and clouds.",
+		stackLine: <StackLine10 />,
+		depP1: "UI : Tailwind Css including light/dark mode.",
+		depP2: "UX : SweetAlert, NProgress, Framer Motion",
+		depP3: "Search : Google Map API (Geocoding, MapsElevation, Places)",
+		depP4: "Maps : Leaflet, react-leaflet, OpenStreetMap, Thunderforest",
+		depP5: "Hosting : Vecel",
+		linkGit: "https://github.com/nordend4000/ezy-weather",
+		linkSite: "https://ezy-weather.vercel.app",
+		button: "Check Weather",
+		img1: "ezy.png",
+		img2: "ezy-phone.png",
+	},
+	{
+		index: 4,
+		title: "Logbook App",
 		subtitleP1:
 			"App to store Paragliding flights data, compute statistics, filter database and manage gear.",
 		subtitleP2: "Upload gpx file to visualise flying trace on the map.",
@@ -60,29 +78,11 @@ const DATA_PORTFOLIO = [
 		img2: "logbook-phone.png",
 	},
 	{
-		index: 4,
-		title: "Showcase Website",
-		subtitleP1: 'Website to promote the book "Beyond Simien Mountains".',
-		subtitleP2:
-			"Personal story and amazing photographies of a trek in Ethiopia to support local communities.",
-		stackLine: <StackLine4 />,
-		depP1: "PHP Website with custom JavaScript",
-		depP2: "Responsive Design pure CSS",
-		depP3: "Google recaptcha to secure contact Form",
-		depP4: "Emails : LWS webmail",
-		depP5: "Hosting : via FTP on LWS",
-		linkGit: "https://github.com/nordend4000/beyond-simien-moutains-",
-		linkSite: "https://beyondsimienmountains.com/",
-		button: "View Website",
-		img1: "simien.png",
-		img2: "beyond-phone.png",
-	},
-	{
 		index: 5,
 		title: "Calendar App",
 		subtitleP1: "My Time Line - Calendar organizer with email reminder.",
 		subtitleP2:
-			"Popular App but challenging project with complex features including drag and drop, multiple date events and filtering.",
+			"Popular application but challenging project with complex features including drag and drop, multiple date events and filtering.",
 		stackLine: <StackLine5 />,
 		depP1: "React App / Date-fns / react-icons",
 		depP2: "Emails : Nodemailer / Schedule : node-cron",

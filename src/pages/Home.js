@@ -8,6 +8,8 @@ import ChevronRight from "../ressources/ChevronRight"
 import TechCard from "../components/TechCard"
 import FooterLinks from "../components/FooterLinks"
 import DATA_SKILLS from "../ressources/DATA_SKILLS"
+import DATA_PROJECT_HOME from "../ressources/DATA_PROJECT_HOME"
+
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import "../styles/home.scss"
@@ -132,20 +134,20 @@ function Home() {
 							You will find on this website a portfolio of the web{" "}
 							<b> Projects </b> I created and several sections about my coding{" "}
 							<b> Skills</b>, <b> Background </b>
-							and <b> Resume </b>.{" "}
+							and <b> Resume. </b>{" "}
 						</p>
 						<p>
 							Finally a <b> Contact </b> form will allow you to share your
 							thought and get in touch with me.
 						</p>
 						<p>
-							I'm currently looking for <b> new opportunities </b> as Web
-							Developer and any freelancing project.
+							I'm currently looking for <b> new opportunities </b> as Front End
+							Developer and also freelancing project.
 						</p>
 					</div>
 				</div>
 				<div className='home__arrow'>
-					<Arrow link='Latest Project' css='arrow-large' />
+					<Arrow link='Featured Project' css='arrow-large' />
 				</div>
 				<section
 					className='home__featured'
@@ -210,127 +212,43 @@ function Home() {
 					<div className='home__arrow'>
 						<Arrow link='More Projects' css='arrow-large' />
 					</div>
-					<div className='home__projects__half animate-home slide_from_left'>
-						<div className='home__projects__proj'>
-							<div className='home__projects__proj__title'>
-								Showcase Website
-							</div>
-							<div className='home__projects__proj__subtitle'>
-								Website to promote the book "Beyond Simien Mountains". Personal
-								story and amazing photographies of a trek in Ethiopia to support
-								local communities.
-							</div>
-							<div className='home__projects__proj__polygone'>
+					{DATA_PROJECT_HOME.map(project => (
+						<>
+							<div className='home__projects__half  animate-home slide_from_left'>
+								<div className='home__projects__proj'>
+									<div className='home__projects__proj__title'>
+										{project.title}
+									</div>
+									<div className='home__projects__proj__subtitle'>
+										{project.subtitle}
+									</div>
+									<div className='home__projects__proj__polygone'>
+										<img
+											src={process.env.PUBLIC_URL + "/images/polygone-topo.png"}
+											alt='polygone topographic shape for background'
+										/>
+									</div>
+								</div>
 								<img
-									src={process.env.PUBLIC_URL + "/images/polygone-topo.png"}
-									alt='polygone topographic shape for background'
+									src={process.env.PUBLIC_URL + `/images/${project.image}.png`}
+									alt={`${project.title} thumbnail`}
+									className='home__projects__image'
 								/>
 							</div>
-						</div>
-						<img
-							src={process.env.PUBLIC_URL + "/images/simien.png"}
-							alt='e-commerce project thumbnail'
-							className='home__projects__image'
-						/>
-					</div>
-					<div className='home__projects__buttons  animate-home slide_from_right'>
-						<a
-							href={"https://github.com/nordend4000/beyond-simien-moutains-"}
-							target='_blank'
-							rel='noreferrer'>
-							<button className='home__projects__buttons__btn'>
-								Open Source
-							</button>
-						</a>
-						<a
-							href={"https://beyondsimienmountains.com/"}
-							target='_blank'
-							rel='noreferrer'>
-							<button className='home__projects__buttons__btn'>
-								View Website
-							</button>
-						</a>
-					</div>
-					<div className='home__projects__half  animate-home slide_from_left'>
-						<div className='home__projects__proj'>
-							<div className='home__projects__proj__title'>
-								Community Network
+							<div className='home__projects__buttons  animate-home slide_from_right'>
+								<a href={project.git} target='_blank' rel='noreferrer'>
+									<button className='home__projects__buttons__btn'>
+										Open Source
+									</button>
+								</a>
+								<a href={project.url} target='_blank' rel='noreferrer'>
+									<button className='home__projects__buttons__btn'>
+										{project.btn}
+									</button>
+								</a>
 							</div>
-							<div className='home__projects__proj__subtitle'>
-								Social App to connect outdoor sport addicts. Join the community
-								and post your planned trip to find people around you. Browse
-								upcomming trips using an interactive map.
-							</div>
-							<div className='home__projects__proj__polygone'>
-								<img
-									src={process.env.PUBLIC_URL + "/images/polygone-topo.png"}
-									alt='polygone topographic shape for background'
-								/>
-							</div>
-						</div>
-						<img
-							src={process.env.PUBLIC_URL + "/images/neveralone.png"}
-							alt='e-commerce project thumbnail'
-							className='home__projects__image'
-						/>
-					</div>
-					<div className='home__projects__buttons  animate-home slide_from_right'>
-						<a
-							href={"https://github.com/nordend4000/never-alone"}
-							target='_blank'
-							rel='noreferrer'>
-							<button className='home__projects__buttons__btn'>
-								Open Source
-							</button>
-						</a>
-						<a
-							href={"https://neveralone.netlify.app/"}
-							target='_blank'
-							rel='noreferrer'>
-							<button className='home__projects__buttons__btn'>
-								View Website
-							</button>
-						</a>
-					</div>
-					<div className='home__projects__half  animate-home slide_from_left'>
-						<div className='home__projects__proj'>
-							<div className='home__projects__proj__title'>
-								Logbook Application
-							</div>
-							<div className='home__projects__proj__subtitle'>
-								App to store Paragliding flights data, compute statistics,
-								filter database and manage gear. Upload .gpx files to visualise
-								flying trace on the map.
-							</div>
-							<div className='home__projects__proj__polygone'>
-								<img
-									src={process.env.PUBLIC_URL + "/images/polygone-topo.png"}
-									alt='polygone topographic shape for background'
-								/>
-							</div>
-						</div>
-						<img
-							src={process.env.PUBLIC_URL + "/images/logbook.png"}
-							alt='e-commerce project thumbnail'
-							className='home__projects__image'
-						/>
-					</div>
-					<div className='home__projects__buttons  animate-home slide_from_right'>
-						<a
-							href={"https://github.com/nordend4000/paraglidinglogbook"}
-							target='_blank'
-							rel='noreferrer'>
-							<button className='home__projects__buttons__btn'>
-								Open Source
-							</button>
-						</a>
-						<a
-							href={"https://paraglidinglogbook.netlify.app"}
-							target='_blank'
-							rel='noreferrer'>
-							<button className='home__projects__buttons__btn'>View App</button>
-						</a>
-					</div>
+						</>
+					))}
 					<div className='home__projects__large-button'>
 						<Link to='/portfolio'>
 							<button className='home__projects__large-button__btn'>

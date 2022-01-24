@@ -1,3 +1,4 @@
+import StackLine4 from "./StackLine4"
 import StackLine6 from "./StackLine6"
 import StackLine7 from "./StackLine7"
 import StackLine8 from "./StackLine8"
@@ -9,7 +10,7 @@ const DATA_MOREPROJECTS = [
 		index: 0,
 		title: "Web Dev Portfolio",
 		subtitle:
-			"The current website you are looking at ! My Portfolio is designed using Figma and built with React and SASS. Animations are crafted using GSAP, SVG and Pixi.js. A Node.js server with Express handles the contact form submission.",
+			"The current website you are looking at. My Portfolio is designed using Figma and built with React and SASS. Animations are crafted using GSAP, SVG and Pixi.js. A Node.js server with Express handles the contact form submission.",
 		stackLine: <StackLine0 />,
 		linkGit: "https://github.com/nordend4000/portfolio2",
 		linkSite: "https://romaingioux.dev",
@@ -29,6 +30,17 @@ const DATA_MOREPROJECTS = [
 	},
 	{
 		index: 2,
+		title: "Showcase Website",
+		subtitle:
+			'Website to promote the book "Beyond Simien Mountains". PHP Website with custom JavaScript and Responsive Design only CSS.',
+		stackLine: <StackLine4 />,
+		linkGit: "https://github.com/nordend4000/beyond-simien-moutains-",
+		linkSite: "https://beyondsimienmountains.com/",
+		button: "View Website",
+		img: "simien.png",
+	},
+	{
+		index: 3,
 		title: "Jahia's Blog",
 		subtitle:
 			"Bilingual blog with articles, real time comments, slider gallery and games. Website built using PHP and MySQL including User Account with authentification and contact form. Admin dashbord to post and manage website data.",
@@ -39,7 +51,7 @@ const DATA_MOREPROJECTS = [
 		img: "jahia.png",
 	},
 	{
-		index: 3,
+		index: 4,
 		title: "Mine Sweeper",
 		subtitle:
 			"Challenging JavaScript game built as a functional programming project. Fully tested using Jest for intergation & unit tests and Cypress for end to end tests. JavaScript app using Babel compiler, Parcel bundler and Lodash utility library.",
@@ -50,10 +62,10 @@ const DATA_MOREPROJECTS = [
 		img: "minesweeper.png",
 	},
 	{
-		index: 4,
+		index: 5,
 		title: "End2End Calculator",
 		subtitle:
-			"Simple JavaScript calculator to create end to end testing using Cypress.io.",
+			"Simple JavaScript calculator styled with CSS. Implementation of end to end testing using Cypress.io.",
 		stackLine: <StackLine8 />,
 		linkGit: "https://github.com/nordend4000/calculator",
 		linkSite: "https://end2endcalculator.netlify.app",

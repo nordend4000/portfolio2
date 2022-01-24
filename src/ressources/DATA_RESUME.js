@@ -1,5 +1,13 @@
 const DATA_RESUME = [
 	{
+		title: "Next.js",
+		subtitle: "Offical Documentation - Online courses",
+		categorie: "WEB DEVELOPMENT TRAINING",
+		description:
+			"Next.js gives you the best developer experience with all the features you need for React Application on production: hybrid static & server rendering. It provides easy way to render pages, dynamic routes and layouts. It offers optimization for images, fonts, scripts loading and a full solution for creating a custom API.   ",
+		date: "December 2021",
+	},
+	{
 		title: "GSAP & SVG Animation",
 		subtitle: "Offical Documentation - Online courses",
 		categorie: "WEB DEVELOPMENT TRAINING",
@@ -31,7 +39,14 @@ const DATA_RESUME = [
 			"Step up on advanced JavaScript features and understand the importance of security, testing and writing clean code. Learn how to connect all JavaScript concepts to build larger projects.",
 		date: "July 2020",
 	},
-
+	{
+		title: "Bootsrap & TailwindCss",
+		subtitle: "Offical Documentation - Online courses",
+		categorie: "WEB DEVELOPMENT TRAINING",
+		description:
+			"Discovery of the two most popular CSS Framework. Mobile first and utility first for rapidly build custopm user interfaces. Experimentation including responsive design, flex box, grid and dark/light mode.",
+		date: "June 2021",
+	},
 	{
 		title: "SASS & CSS Animation ",
 		subtitle: "OpenClassrooms - Online courses",

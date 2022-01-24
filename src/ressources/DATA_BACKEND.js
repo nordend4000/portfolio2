@@ -5,6 +5,7 @@ import { AiOutlineFire } from "react-icons/ai"
 import { SiHeroku } from "react-icons/si"
 import { SiNetlify } from "react-icons/si"
 import { FaPhp } from "react-icons/fa"
+import { SiVercel } from "react-icons/si"
 
 const DATA_BACKEND = [
 	{
@@ -52,6 +53,13 @@ const DATA_BACKEND = [
 	{
 		logo: <SiHeroku className='Stars-container__icons' />,
 		data: "Heroku",
+		level: 3.5,
+		title: "white-text",
+		icons: "red-text",
+	},
+	{
+		logo: <SiVercel className='Stars-container__icons' />,
+		data: "Vercel",
 		level: 3.5,
 		title: "white-text",
 		icons: "red-text",
