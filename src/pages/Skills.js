@@ -1,9 +1,12 @@
 import React, { useRef, useLayoutEffect } from "react"
-import DATA_FRONTEND from "../ressources/DATA_FRONTEND"
-import DATA_BACKEND from "../ressources/DATA_BACKEND"
+import DATA_FRONTEND1 from "../ressources/DATA_FRONTEND1"
+import DATA_FRONTEND2 from "../ressources/DATA_FRONTEND2"
+import DATA_BACKEND1 from "../ressources/DATA_BACKEND1"
+import DATA_BACKEND2 from "../ressources/DATA_BACKEND2"
 import DATA_CROSSOVER1 from "../ressources/DATA_CROSSOVER1"
 import DATA_CROSSOVER2 from "../ressources/DATA_CROSSOVER2"
-import DATA_LANGUAGES from "../ressources/DATA_LANGUAGES"
+import DATA_LANGUAGES1 from "../ressources/DATA_LANGUAGES1"
+import DATA_LANGUAGES2 from "../ressources/DATA_LANGUAGES2"
 import Stars from "../components/Stars"
 import Triptic2 from "../ressources/Triptic2"
 import { gsap } from "gsap"
@@ -119,18 +122,35 @@ function Skills() {
 							<p>Design</p>
 							<p>Accessibility</p> <p>Testing</p>
 						</div>
-						<div className='Stars-container'>
-							{DATA_FRONTEND.map(el => (
-								<span className='Stars-container__rows' key={el.data}>
-									{el.logo}
-									<Stars
-										data={el.data}
-										level={el.level}
-										title={el.title}
-										icons={el.icons}
-									/>
-								</span>
-							))}
+						<div className='Stars-container '>
+							<div className='block-ctn'>
+								<div className='block-half'>
+									{DATA_FRONTEND1.map(el => (
+										<span className='Stars-container__rows' key={el.data}>
+											{el.logo}
+											<Stars
+												data={el.data}
+												level={el.level}
+												title={el.title}
+												icons={el.icons}
+											/>
+										</span>
+									))}
+								</div>
+								<div className='block-half'>
+									{DATA_FRONTEND2.map(el => (
+										<span className='Stars-container__rows' key={el.data}>
+											{el.logo}
+											<Stars
+												data={el.data}
+												level={el.level}
+												title={el.title}
+												icons={el.icons}
+											/>
+										</span>
+									))}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -144,22 +164,39 @@ function Skills() {
 							<p>Security </p>
 						</div>
 						<div className='Stars-container'>
-							{DATA_BACKEND.map(el => (
-								<span className='Stars-container__rows' key={el.data}>
-									{el.logo}
-									<Stars
-										data={el.data}
-										level={el.level}
-										title={el.title}
-										icons={el.icons}
-									/>
-								</span>
-							))}
+							<div className='block-ctn'>
+								<div className='block-half'>
+									{DATA_BACKEND1.map(el => (
+										<span className='Stars-container__rows' key={el.data}>
+											{el.logo}
+											<Stars
+												data={el.data}
+												level={el.level}
+												title={el.title}
+												icons={el.icons}
+											/>
+										</span>
+									))}
+								</div>
+								<div className='block-half'>
+									{DATA_BACKEND2.map(el => (
+										<span className='Stars-container__rows' key={el.data}>
+											{el.logo}
+											<Stars
+												data={el.data}
+												level={el.level}
+												title={el.title}
+												icons={el.icons}
+											/>
+										</span>
+									))}
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div className='panel3'>
-					<div className='panel-crossover'>
+					<div className='panel  panel-last-child'>
 						<div className='panel__text  blue-text'>CROSSOVER</div>
 						<div className='panel__text-undeline '>
 							<p>Workflow</p>
@@ -168,44 +205,63 @@ function Skills() {
 							<p>Languages</p>
 						</div>
 						<div className='Stars-container'>
-							<div className='last-skills-columns'>
-								{DATA_CROSSOVER1.map(el => (
-									<span className='Stars-container__rows' key={el.data}>
-										{el.logo}
-										<Stars
-											data={el.data}
-											level={el.level}
-											title={el.title}
-											icons={el.icons}
-										/>
-									</span>
-								))}
+							<div className='block-ctn'>
+								<div className='block-half'>
+									{DATA_CROSSOVER1.map(el => (
+										<span className='Stars-container__rows' key={el.data}>
+											{el.logo}
+											<Stars
+												data={el.data}
+												level={el.level}
+												title={el.title}
+												icons={el.icons}
+											/>
+										</span>
+									))}
+								</div>
+								<div className='block-half'>
+									{DATA_CROSSOVER2.map(el => (
+										<span className='Stars-container__rows' key={el.data}>
+											{el.logo}
+											<Stars
+												data={el.data}
+												level={el.level}
+												title={el.title}
+												icons={el.icons}
+											/>
+										</span>
+									))}
+								</div>
 							</div>
-							<div className='last-skills-columns'>
-								{DATA_CROSSOVER2.map(el => (
-									<span className='Stars-container__rows' key={el.data}>
-										{el.logo}
-										<Stars
-											data={el.data}
-											level={el.level}
-											title={el.title}
-											icons={el.icons}
-										/>
-									</span>
-								))}
-							</div>
-							<div className='last-skills-columns'>
-								{DATA_LANGUAGES.map(el => (
-									<span className='Stars-container__rows' key={el.data}>
-										<div className='flags'>{el.logo}</div>
-										<Stars
-											data={el.data}
-											level={el.level}
-											title={el.title}
-											icons={el.icons}
-										/>
-									</span>
-								))}
+							<div className='block-ctn'>
+								<div className='block-half'>
+									{" "}
+									{DATA_LANGUAGES1.map(el => (
+										<span className='Stars-container__rows' key={el.data}>
+											<div className='flags'>{el.logo}</div>
+											<Stars
+												data={el.data}
+												level={el.level}
+												title={el.title}
+												icons={el.icons}
+											/>
+										</span>
+									))}
+								</div>
+								<div className='block-half'>
+									{" "}
+									{DATA_LANGUAGES2.map(el => (
+										<span className='Stars-container__rows' key={el.data}>
+											<div className='flags'>{el.logo}</div>
+											<Stars
+												data={el.data}
+												level={el.level}
+												title={el.title}
+												icons={el.icons}
+											/>
+										</span>
+									))}
+								</div>
 							</div>
 						</div>
 					</div>

@@ -56,26 +56,27 @@
 .panel {
 	position: absolute;
 	top: 40%;
-	left: 55%;
+	left: 60%;
 	transform: translate(-50%, -50%);
 	color: white;
-	padding: 2% 10%;
+	padding: 2% 6%;
 	padding-bottom: 4%;
 	border-radius: 10px;
 	overflow-x: hidden;
-
+	width: 95%;
 	&__text {
 		font-family: "ShadowsIntoLight";
-		font-size: 3em;
+		font-size: 2.6em;
 		letter-spacing: 2.5px;
+		margin-top: 10px;
 	}
 	&__text-undeline {
 		font-weight: 500;
-		font-size: 1.1rem;
+		font-size: 0.9rem;
 		color: var(--sec-dark);
-		margin-bottom: 4%;
+		margin-bottom: 1%;
 		letter-spacing: 2px;
-		line-height: 26px;
+		line-height: 22px;
 	}
 	&__logo {
 		position: relative;
@@ -83,19 +84,6 @@
 		left: 30px;
 	}
 }
-.panel-crossover {
-	position: absolute;
-	top: 50%;
-	left: 10%;
-	transform: translateY(-50%);
-	color: white;
-	padding: 2% 14%;
-	padding-right: 1%;
-	padding-bottom: 1%;
-	margin-top: 50px;
-	margin-left: -5%;
-}
-
 .panel-last-child {
 	padding: 2% 1%;
 }
@@ -120,6 +108,7 @@
 	justify-content: space-around;
 	align-items: center;
 	color: var(--main-dark);
+	font-size: 1.4em;
 }
 .last-skills-columns {
 	margin-top: 20px;
@@ -132,15 +121,27 @@
 .Stars-container {
 	border-top: 1px solid white;
 	border-left: 1px solid white;
+	width: 100%;
+	margin-top: 4%;
+	padding-top: 2%;
+
 	&__rows {
+		font-size: 0.75em;
 		display: flex;
 		align-items: center;
-		margin-left: 20px;
+		margin-left: 10px;
 		margin-top: 0px;
 	}
 	&__icons {
 		font-size: 1.4em;
 	}
+}
+.block-half {
+	width: 100%;
+}
+.block-ctn {
+	display: flex;
+	flex-direction: column;
 }
 .Stars {
 	display: flex;
@@ -195,6 +196,7 @@
 	width: 18px;
 	margin-top: 4px;
 }
+
 /******************************************************************************************
 ********************************   MEDIA QUERIES   ****************************************
 ********************************************************************************************
@@ -217,7 +219,6 @@
 		&__text-undeline {
 			font-weight: 500;
 			font-size: 0.8rem;
-
 			margin-bottom: 8%;
 			letter-spacing: 2px;
 			line-height: 20px;
@@ -245,12 +246,15 @@
 @media only screen and (min-width: 732px) {
 	.panel1 {
 		height: 100vh;
+		width: 100vw;
 	}
 	.panel2 {
 		height: 100vh;
+		width: 100vw;
 	}
 	.panel3 {
 		height: 100vh;
+		width: 100vw;
 	}
 	.skills-landing {
 		position: absolute;
@@ -260,6 +264,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		overflow-y: hidden;
 		&__box1 {
 			margin-left: 0%;
 			width: 100%;
@@ -292,31 +297,31 @@
 		}
 	}
 	.panel {
+		position: absolute;
+		top: 40%;
+		left: 55%;
+		transform: translate(-50%, -50%);
+		padding: 2% 8%;
+		padding-bottom: 4%;
+		border-radius: 10px;
+		width: 90%;
 		&__text {
 			font-size: 3.8em;
 			letter-spacing: 2.5px;
+			margin-top: 20%;
 		}
 		&__text-undeline {
 			display: flex;
 			flex-wrap: wrap;
 			font-size: 1.1em;
 			font-weight: 700;
-			margin-bottom: 8%;
+			margin-bottom: 3%;
 			letter-spacing: 2px;
-			line-height: 26px;
+			line-height: 24px;
 			& p {
 				margin-right: 30px;
 			}
 		}
-	}
-	.panel-crossover {
-		position: absolute;
-		top: 50%;
-		left: 10%;
-		transform: translateY(-50%);
-		padding: 2% 8%;
-		padding-bottom: 4%;
-		border-radius: 10px;
 	}
 	.panel-last-child {
 		padding: 2% 1%;
@@ -329,6 +334,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		font-size: 1.7em;
 	}
 	.last-skills-columns {
 		display: flex;
@@ -336,29 +342,29 @@
 		justify-content: flex-start;
 		flex-wrap: wrap;
 	}
-
 	.first-panel {
 		padding: 30px;
 		margin-top: 30px;
 	}
-
 	.Stars-container {
+		width: 95%;
 		margin-top: 5%;
+		padding-top: 3%;
 		&__rows {
 			display: flex;
 			align-items: center;
 			margin-left: 20px;
 			margin-right: 10%;
+			margin-bottom: 3%;
 		}
 		&__icons {
-			font-size: 1.4em;
+			font-size: 1.7em;
 		}
 	}
 	.Stars {
 		display: flex;
 		justify-content: left;
 		padding: 2% 0;
-
 		&__title {
 			margin-right: 5px;
 			margin-left: 5px;
@@ -371,21 +377,32 @@
 			align-items: center;
 		}
 	}
+	.block-half {
+		width: 60%;
+	}
+	.block-ctn {
+		display: flex;
+		flex-direction: row;
+	}
 }
 /******************************************************************************************
 ********************************   MEDIA QUERIES   ****************************************
 ********************************************************************************************
 ********************************      DESKTOP     ****************************************
 ********************************************************************************************/
+
 @media only screen and (min-width: 1130px) {
 	.panel1 {
 		height: 100vh;
+		width: 100vw;
 	}
 	.panel2 {
 		height: 100vh;
+		width: 100vw;
 	}
 	.panel3 {
 		height: 100vh;
+		width: 100vw;
 	}
 	.skills-landing {
 		position: absolute;
@@ -429,12 +446,14 @@
 	.panel {
 		position: absolute;
 		top: 50%;
-		left: 40%;
+		left: 50%;
 		transform: translate(-50%, -50%);
 		padding: 2% 8%;
 		padding-bottom: 4%;
 		border-radius: 10px;
+		width: 80%;
 		&__text {
+			margin-top: 0%;
 			font-size: 4em;
 		}
 		&__text-undeline {
@@ -460,15 +479,6 @@
 			left: 30px;
 		}
 	}
-	.panel-crossover {
-		position: absolute;
-		top: 50%;
-		left: 20%;
-		transform: translateY(-50%);
-		padding: 2% 8%;
-		padding-bottom: 4%;
-		border-radius: 10px;
-	}
 	.panel-last-child {
 		padding: 2% 1%;
 	}
@@ -480,6 +490,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		font-size: 1.9em;
 	}
 	.last-skills-columns {
 		display: flex;
@@ -487,13 +498,20 @@
 		justify-content: flex-start;
 		flex-wrap: wrap;
 	}
-
 	.first-panel {
 		padding: 30px;
 		margin-top: 30px;
 	}
-
+	.block-half {
+		width: 60%;
+	}
+	.block-ctn {
+		display: flex;
+		flex-direction: row;
+	}
 	.Stars-container {
+		width: 80%;
+		padding-top: 15px;
 		&__rows {
 			display: flex;
 			align-items: center;
@@ -501,7 +519,7 @@
 			margin-right: 10%;
 		}
 		&__icons {
-			font-size: 1.4em;
+			font-size: 1.9em;
 		}
 	}
 	.Stars {

@@ -5,6 +5,10 @@ import { IoLogoSass } from "react-icons/io5"
 import { IoLogoNodejs } from "react-icons/io5"
 import { SiMongodb } from "react-icons/si"
 import { FiFigma } from "react-icons/fi"
+import { SiNextdotjs } from "react-icons/si"
+import { SiTailwindcss } from "react-icons/si"
+import { BsBootstrap } from "react-icons/bs"
+import { SiFramer } from "react-icons/si"
 
 const DATA_SKILLS = [
 	{
@@ -23,9 +27,29 @@ const DATA_SKILLS = [
 		text: "The ultimate technology to help speed up the styling process using BEM principles and the 7-1 pattern. I use SASS preprocessor mainly for variables, nesting, mixins, and partials.",
 	},
 	{
+		abrev: <SiNextdotjs />,
+		title: "Next.js",
+		text: "The React Framework for production gives the best developer experience with all the features such as hybrid static & server rendering, images & script optimization, smart bundling, route pre-fetching, and API creation.",
+	},
+	{
+		abrev: <SiTailwindcss />,
+		title: "Tailwindcss",
+		text: "Tailwind CSS works by scanning all HTML files, JavaScript components, and any other templates for class names, generating the corresponding styles and then writing them to a static CSS file. It's fast, flexible, and reliable — with zero-runtime.",
+	},
+	{
+		abrev: <BsBootstrap />,
+		title: "Bootstrap",
+		text: "Quickly design and customize responsive mobile-first sites, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.",
+	},
+	{
 		abrev: <SiGreensock />,
 		title: "GSAP",
 		text: "GSAP is an animation library that lets you craft high-performance animations that work in every major browser. I'm working with Tweens, Timeline, ScrollTrigger and other popular GreenSock's plugins.",
+	},
+	{
+		abrev: <SiFramer />,
+		title: "Framer Motion",
+		text: "Framer Motion is a production-ready motion library for React. It brings declarative animations, effortless layout transitions and gestures while maintaining HTML and SVG semantics. ",
 	},
 	{
 		abrev: <FiFigma />,
