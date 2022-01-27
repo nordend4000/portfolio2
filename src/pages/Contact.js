@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser"
 import { gsap } from "gsap"
 import Recaptcha from "react-recaptcha"
 import { BiMailSend } from "react-icons/bi"
-import Axios from "axios"
 import Triptic2 from "../ressources/Triptic2"
 import FooterLinks from "../components/FooterLinks"
 import "../styles/contact.scss"
@@ -93,7 +92,7 @@ function Contact() {
 		}
 	}
 
-	const sendMessage = async () => {
+	const sendMessage = () => {
 		if (name === "") {
 			setNameChecked("Please enter your name or the name of your company.")
 		}
@@ -116,13 +115,22 @@ function Contact() {
 				"Please use Recaptcha to verify that you are a real Human !",
 			)
 		}
-		setSending(true)
-		const form = {
-			user_name: name,
-			user_email: email,
-			message: message,
+		if (
+			name !== "" &&
+			email !== "" &&
+			message !== "" &&
+			formChecked === "" &&
+			emailChecked === "" &&
+			humanVerified
+		) {
+			const form = {
+				user_name: name,
+				user_email: email,
+				message: message,
+			}
+			setSending(true)
+			sendEmailjs(form)
 		}
-		sendEmailjs(form)
 	}
 
 	function sendEmailjs(form) {
