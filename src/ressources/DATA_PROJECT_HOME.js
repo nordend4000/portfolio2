@@ -3,7 +3,7 @@ const DATA_PROJECT_HOME = [
 		title: "Showcase Website",
 		subtitle: `Website to promote the book "Beyond Simien Mountains". Personal story and amazing photographies of a trek in Ethiopia to support local communities.`,
 		btn: "View Website",
-		url: "https://beyondsimienmountains.com/",
+		url: "https://beyond-simienmountains.herokuapp.com",
 		git: "https://github.com/nordend4000/beyond-simien-moutains-",
 		image: "simien",
 	},

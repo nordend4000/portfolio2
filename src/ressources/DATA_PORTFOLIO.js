@@ -44,14 +44,15 @@ const DATA_PORTFOLIO = [
 	{
 		index: 3,
 		title: "Weather App",
-		subtitleP1: "Next.js Application fetching data from OpenWeather API. ",
+		subtitleP1:
+			"Next.js Application fetching data from OpenWeather API including weather maps. ",
 		subtitleP2:
-			"Click on the searching map to get the weather anywhere in the world and check out the latest weather maps for precipitation, temperature, wind, pressure and clouds.",
+			"A searching map allow you to get the weather anywhere in the world with only one click.",
 		stackLine: <StackLine10 />,
 		depP1: "UI : Tailwind Css including light/dark mode.",
 		depP2: "UX : SweetAlert, NProgress, Framer Motion",
 		depP3: "Search : Google Map API (Geocoding, MapsElevation, Places)",
-		depP4: "Maps : Leaflet, react-leaflet, OpenStreetMap, Thunderforest",
+		depP4: "Maps : Leaflet, react-leaflet, OpenStreetMap",
 		depP5: "Hosting : Vecel",
 		linkGit: "https://github.com/nordend4000/ezy-weather",
 		linkSite: "https://ezy-weather.vercel.app",
