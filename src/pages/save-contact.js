@@ -22,6 +22,8 @@ function Contact() {
 	const [humanVerified, setHumanVerified] = useState(false)
 	const [sending, setSending] = useState(false)
 
+	const form = useRef()
+
 	const contactTripticRef = useRef()
 	const contactRef = useRef()
 	const tl = useRef()
@@ -113,45 +115,40 @@ function Contact() {
 		}
 		if (!humanVerified) {
 			return setMessageChecked(
-				"Please use Recaptcha to verify that you are a real Human !",
+				"Please use Recaptcha to verify your a real Human !",
 			)
 		}
 		setSending(true)
-		const form = {
-			user_name: name,
-			user_email: email,
-			message: message,
-		}
-		sendEmailjs(form)
-	}
-
-	function sendEmailjs(form) {
-		emailjs
-			.send(
-				`${process.env.REACT_APP_EMAILJS_SERVICE_ID}`,
-				`${process.env.REACT_APP_EMAILJS_TEMPLATE_ID}`,
-				form,
-				`${process.env.REACT_APP_EMAILJS_USER_ID}`,
-			)
-			.then(
-				result => {
-					setAnswer(
-						"Your message has been sent successfully. Thanks for reaching out. I will answer you as soon as possible.",
-					)
-					setError("")
-					setName("")
-					setEmail("")
-					setMessage("")
-					setSending(false)
-				},
-				error => {
-					setError(
-						"Oooops something wrong happened, please try again to send your message.",
-					)
-					setAnswer("")
-					setSending(false)
-				},
-			)
+		await Axios({
+			method: "POST",
+			data: {
+				email,
+				name,
+				message: message,
+			},
+			withCredentials: true,
+			url: `${process.env.REACT_APP_SERVER_URL}/contact-form`,
+		}).then(res => {
+			if (
+				res.data ===
+				"Ooops something wrong happened, please try again to send your message."
+			) {
+				setError(res.data)
+				setAnswer("")
+				setSending(false)
+			}
+			if (
+				res.data ===
+				"Your message has been sent successfuly. Thanks for your interest, I will reply to you as soon as possible..."
+			) {
+				setAnswer(res.data)
+				setError("")
+				setName("")
+				setEmail("")
+				setMessage("")
+				setSending(false)
+			}
+		})
 	}
 
 	return (
@@ -201,7 +198,7 @@ function Contact() {
 			<div className='triptic2-pages' ref={contactTripticRef}>
 				<Triptic2 />
 			</div>
-			<form className='Contact__form'>
+			<div className='Contact__form'>
 				<label className='Contact__form__label'>Name :</label>
 				<input
 					className='Contact__form__input'
@@ -231,7 +228,7 @@ function Contact() {
 					value={message}
 				/>
 				<div className='Contact__form__check'>{messageChecked}</div>
-			</form>
+			</div>
 			<div className='Contact__recaptcha'>
 				<Recaptcha
 					sitekey={`${process.env.REACT_APP_RECAPTCHA_SITE_KEY}`}
