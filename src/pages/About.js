@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef } from "react"
 import FooterLinks from "../components/FooterLinks"
+import Layout from "../components/Layout"
 import "../styles/about.scss"
 import { HiOutlineCode } from "react-icons/hi"
 import { MdOutlineVolunteerActivism } from "react-icons/md"
@@ -11,6 +12,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import DATA_RESUME from "../ressources/DATA_RESUME"
 import Triptic2 from "../ressources/Triptic2"
 import { Helmet } from "react-helmet"
+import { Page } from "../ressources/variants"
+import { motion } from "framer-motion/dist/framer-motion"
 
 function About() {
 	const aboutTripticRef = useRef()
@@ -110,124 +113,128 @@ function About() {
 		)
 	}
 	return (
-		<div className='About' ref={aboutRef}>
-			<Helmet>
-				<title>Romain GIOUX - About</title>
-				<meta
-					name='title'
-					content='Romain GIOUX - Portfolio WEB DEVELOPER'
-					data-react-helmet='true'
-				/>
-				<meta
-					name='description'
-					content='Romain GIOUX - WEB DEVELOPER PORTFOLIO: Section about me and background.'
-					data-react-helmet='true'
-				/>
-				<meta name='author' content='Romain Gioux' />
-			</Helmet>
-			<div className='About__landing'>
-				<div className='About__landing__box1'>
-					<h1 id='aboutTitle'>ABOUT</h1>
-					<h2 className='About__landing__box1__subtitle' id='aboutSubtitle'>
-						Always Setting New Goals
-					</h2>
+		<motion.div initial='initial' animate='animate' exit='exit' variants={Page}>
+			<Layout>
+				<div className='About' ref={aboutRef}>
+					<Helmet>
+						<title>Romain GIOUX - About</title>
+						<meta
+							name='title'
+							content='Romain GIOUX - Portfolio WEB DEVELOPER'
+							data-react-helmet='true'
+						/>
+						<meta
+							name='description'
+							content='Romain GIOUX - WEB DEVELOPER PORTFOLIO: Section about me and background.'
+							data-react-helmet='true'
+						/>
+						<meta name='author' content='Romain Gioux' />
+					</Helmet>
+					<div className='About__landing'>
+						<div className='About__landing__box1'>
+							<h1 id='aboutTitle'>ABOUT</h1>
+							<h2 className='About__landing__box1__subtitle' id='aboutSubtitle'>
+								Always Setting New Goals
+							</h2>
+						</div>
+						<div className='About__landing__box2' id='aboutP'>
+							<p>
+								Hi there, I'm <b>Romain GIOUX</b> an inspired self-taught
+								<b> Web Developer </b> based in Zurich, Switzerland.
+							</p>
+							<p>
+								I love discovering new technologies and
+								<b> Solving Digital Puzzles.</b>
+							</p>
+							<p>
+								Aiming for a career reconversion, I have past the last 2 years
+								learning how
+								<b> the Web is Built </b> and how I can contribute in make it{" "}
+								<b> a Pleasant Space.</b>
+							</p>
+							<p>
+								<b>My challenge</b> is to turn this enthusiasm and commitment
+								into a professional activity, gain experience by
+								<b> Creating Complex Projects </b> and join an
+								<b> Ambitious Team.</b>
+							</p>
+						</div>
+					</div>
+					<div className='About__part2'>
+						<h2>Overview of My Background</h2>
+						<div className='About__part2__subtitle-background'>
+							<div className='About__part2__subtitle-background__item'>
+								<HiOutlineCode className='About__part2__subtitle-background__item__icons' />
+								WEB DEVELOPMENT TRAINING
+							</div>
+							<div className='About__part2__subtitle-background__item'>
+								<RiOrganizationChart className='About__part2__subtitle-background__item__icons' />
+								WORKING EXPERIENCES
+							</div>
+							<div className='About__part2__subtitle-background__item'>
+								<GiHumanPyramid className='About__part2__subtitle-background__item__icons' />
+								HUMANITARIAN MISSONS
+							</div>
+							<div className='About__part2__subtitle-background__item'>
+								<MdOutlineVolunteerActivism className='About__part2__subtitle-background__item__icons' />
+								VOLUNTEERING
+							</div>
+							<div className='About__part2__subtitle-background__item'>
+								<MdCastForEducation className='About__part2__subtitle-background__item__icons' />
+								EDUCATION
+							</div>
+						</div>
+					</div>
+					<div className='timeline'>
+						<ul>
+							{DATA_RESUME.map((te, idx) => {
+								return (
+									<li key={`${te.title}_${te.date}`}>
+										<div className='content'>
+											<h6
+												className={`animate ${
+													idx % 2 === 0 ? "slide_from_left" : "slide_from_right"
+												}`}>
+												{te.categorie}
+											</h6>
+											<h3
+												className={`animate ${
+													idx % 2 === 0 ? "slide_from_left" : "slide_from_right"
+												}`}>
+												{te.title}
+											</h3>
+											<h5
+												className={`animate ${
+													idx % 2 === 0 ? "slide_from_left" : "slide_from_right"
+												}`}>
+												{te.subtitle}
+											</h5>
+											<p
+												className={`animate ${
+													idx % 2 === 0 ? "slide_from_left" : "slide_from_right"
+												}`}>
+												{te.description}
+											</p>
+										</div>
+										<div
+											className={`time animate ${
+												idx % 2 === 0 ? "slide_from_right" : "slide_from_left"
+											}`}>
+											<h4>{te.date}</h4>
+										</div>
+									</li>
+								)
+							})}
+							<div style={{ clear: "both" }}></div>
+						</ul>
+					</div>
+					<div className='triptic2-pages' ref={aboutTripticRef}>
+						<Triptic2 />
+					</div>
+					<FooterLinks />
 				</div>
-				<div className='About__landing__box2' id='aboutP'>
-					<p>
-						Hi there, I'm <b>Romain GIOUX</b> an inspired self-taught
-						<b> Web Developer </b> based in Zurich, Switzerland.
-					</p>
-					<p>
-						I love discovering new technologies and
-						<b> Solving Digital Puzzles.</b>
-					</p>
-					<p>
-						Aiming for a career reconversion, I have past the last 2 years
-						learning how
-						<b> the Web is Built </b> and how I can contribute in make it{" "}
-						<b> a Pleasant Space.</b>
-					</p>
-					<p>
-						<b>My challenge</b> is to turn this enthusiasm and commitment into a
-						professional activity, gain experience by
-						<b> Creating Complex Projects </b> and join an
-						<b> Ambitious Team.</b>
-					</p>
-				</div>
-			</div>
-			<div className='About__part2'>
-				<h2>Overview of My Background</h2>
-				<div className='About__part2__subtitle-background'>
-					<div className='About__part2__subtitle-background__item'>
-						<HiOutlineCode className='About__part2__subtitle-background__item__icons' />
-						WEB DEVELOPMENT TRAINING
-					</div>
-					<div className='About__part2__subtitle-background__item'>
-						<RiOrganizationChart className='About__part2__subtitle-background__item__icons' />
-						WORKING EXPERIENCES
-					</div>
-					<div className='About__part2__subtitle-background__item'>
-						<GiHumanPyramid className='About__part2__subtitle-background__item__icons' />
-						HUMANITARIAN MISSONS
-					</div>
-					<div className='About__part2__subtitle-background__item'>
-						<MdOutlineVolunteerActivism className='About__part2__subtitle-background__item__icons' />
-						VOLUNTEERING
-					</div>
-					<div className='About__part2__subtitle-background__item'>
-						<MdCastForEducation className='About__part2__subtitle-background__item__icons' />
-						EDUCATION
-					</div>
-				</div>
-			</div>
-			<div className='timeline'>
-				<ul>
-					{DATA_RESUME.map((te, idx) => {
-						return (
-							<li key={`${te.title}_${te.date}`}>
-								<div className='content'>
-									<h6
-										className={`animate ${
-											idx % 2 === 0 ? "slide_from_left" : "slide_from_right"
-										}`}>
-										{te.categorie}
-									</h6>
-									<h3
-										className={`animate ${
-											idx % 2 === 0 ? "slide_from_left" : "slide_from_right"
-										}`}>
-										{te.title}
-									</h3>
-									<h5
-										className={`animate ${
-											idx % 2 === 0 ? "slide_from_left" : "slide_from_right"
-										}`}>
-										{te.subtitle}
-									</h5>
-									<p
-										className={`animate ${
-											idx % 2 === 0 ? "slide_from_left" : "slide_from_right"
-										}`}>
-										{te.description}
-									</p>
-								</div>
-								<div
-									className={`time animate ${
-										idx % 2 === 0 ? "slide_from_right" : "slide_from_left"
-									}`}>
-									<h4>{te.date}</h4>
-								</div>
-							</li>
-						)
-					})}
-					<div style={{ clear: "both" }}></div>
-				</ul>
-			</div>
-			<div className='triptic2-pages' ref={aboutTripticRef}>
-				<Triptic2 />
-			</div>
-			<FooterLinks />
-		</div>
+			</Layout>
+		</motion.div>
 	)
 }
 

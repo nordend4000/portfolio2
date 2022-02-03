@@ -7,6 +7,9 @@ import Triptic2 from "../ressources/Triptic2"
 import FooterLinks from "../components/FooterLinks"
 import "../styles/contact.scss"
 import { Helmet } from "react-helmet"
+import Layout from "../components/Layout"
+import { Page } from "../ressources/variants"
+import { motion } from "framer-motion/dist/framer-motion"
 
 function Contact() {
 	const [email, setEmail] = useState("")
@@ -163,120 +166,126 @@ function Contact() {
 	}
 
 	return (
-		<div className='Contact' ref={contactRef}>
-			<Helmet>
-				<title>Romain GIOUX - Contact</title>
-				<meta
-					name='title'
-					content='Romain GIOUX - Portfolio WEB DEVELOPER'
-					data-react-helmet='true'
-				/>
-				<meta
-					name='description'
-					content='Romain GIOUX - WEB DEVELOPER PORTFOLIO: Contact form to get in touch and tell your thought.'
-					data-react-helmet='true'
-				/>
-				<meta name='author' content='Romain Gioux' />
-			</Helmet>
-			<div className='Contact__landing'>
-				<div className='Contact__landing__box1'>
-					<h1 id='contactTitle'>Contact</h1>
-					<h2 className='Contact__landing__box1__subtitle' id='contactSubtitle'>
-						New project, job offer, freelancing...
-					</h2>
-				</div>
-				<div className='Contact__landing__box2' id='contactP'>
-					<p className=''>
-						<b>Let's talk ...</b>
-					</p>
-					<p className=''>
-						Do you need advice to <b>create a new project </b>?
-					</p>
-					<p className=''>
-						Are you <b> looking for </b> a Web Developer?
-					</p>
-					<p className=''>
-						Would you like to get a <b> quote </b> for a freelance mission?
-					</p>
-					<p className=''>
-						Whatever your motivation, please don't hesitate to
-						<b> get in touch</b>.
-					</p>
-					<p>Send me directly an E-mail or use the contact form below.</p>
-					<p className=''>I would be delighted to reply your message.</p>
-				</div>
-			</div>
-			<div className='triptic2-pages' ref={contactTripticRef}>
-				<Triptic2 />
-			</div>
-			<form className='Contact__form'>
-				<label className='Contact__form__label'>Name :</label>
-				<input
-					className='Contact__form__input'
-					placeholder='Your Name'
-					type='text'
-					onChange={e => setName(e.target.value.toString())}
-					onBlur={checkInput}
-					value={name}
-				/>
-				<div className='Contact__form__check'>{nameChecked}</div>
-				<label className='Contact__form__label'>e-Mail :</label>
-				<input
-					className='Contact__form__input'
-					placeholder='Your email address'
-					type='email'
-					onChange={e => setEmail(e.target.value.toString())}
-					onBlur={checkEmail}
-					value={email}
-				/>
-				<div className='Contact__form__check'>{emailChecked}</div>
-				<label className='Contact__form__label'>Message :</label>
-				<textarea
-					className='Contact__form__textarea '
-					placeholder='Your message...'
-					onChange={e => setMessage(e.target.value.toString())}
-					onBlur={checkInput}
-					value={message}
-				/>
-				<div className='Contact__form__check'>{messageChecked}</div>
-			</form>
-			<div className='Contact__recaptcha'>
-				<Recaptcha
-					sitekey={`${process.env.REACT_APP_RECAPTCHA_SITE_KEY}`}
-					render='explicit'
-					verifyCallback={verifyCallback}
-					onloadCallback={onloadCallback}
-				/>
-			</div>
-			{sending ? (
-				<div className='sending-email'>
-					<img
-						alt='sending email animation'
-						src={process.env.PUBLIC_URL + `/images/loading.svg`}
-					/>
-				</div>
-			) : (
-				(answer || error) && (
-					<div className=''>
-						{answer && <div className='Contact__answer'>{answer}</div>}
-						{error && <div className='Contact__error'>{error}</div>}
+		<motion.div initial='initial' animate='animate' exit='exit' variants={Page}>
+			<Layout>
+				<div className='Contact' ref={contactRef}>
+					<Helmet>
+						<title>Romain GIOUX - Contact</title>
+						<meta
+							name='title'
+							content='Romain GIOUX - Portfolio WEB DEVELOPER'
+							data-react-helmet='true'
+						/>
+						<meta
+							name='description'
+							content='Romain GIOUX - WEB DEVELOPER PORTFOLIO: Contact form to get in touch and tell your thought.'
+							data-react-helmet='true'
+						/>
+						<meta name='author' content='Romain Gioux' />
+					</Helmet>
+					<div className='Contact__landing'>
+						<div className='Contact__landing__box1'>
+							<h1 id='contactTitle'>Contact</h1>
+							<h2
+								className='Contact__landing__box1__subtitle'
+								id='contactSubtitle'>
+								New project, job offer, freelancing...
+							</h2>
+						</div>
+						<div className='Contact__landing__box2' id='contactP'>
+							<p className=''>
+								<b>Let's talk ...</b>
+							</p>
+							<p className=''>
+								Do you need advice to <b>create a new project </b>?
+							</p>
+							<p className=''>
+								Are you <b> looking for </b> a Web Developer?
+							</p>
+							<p className=''>
+								Would you like to get a <b> quote </b> for a freelance mission?
+							</p>
+							<p className=''>
+								Whatever your motivation, please don't hesitate to
+								<b> get in touch</b>.
+							</p>
+							<p>Send me directly an E-mail or use the contact form below.</p>
+							<p className=''>I would be delighted to reply your message.</p>
+						</div>
 					</div>
-				)
-			)}
-			<div className='Contact__send'>
-				<div className='Contact__form__check'>{formChecked}</div>
-				<div className='Contact__send__btn' onClick={sendMessage}>
-					<BiMailSend /> Send Message
+					<div className='triptic2-pages' ref={contactTripticRef}>
+						<Triptic2 />
+					</div>
+					<div className='Contact__form'>
+						<label className='Contact__form__label'>Name :</label>
+						<input
+							className='Contact__form__input'
+							placeholder='Your Name'
+							type='text'
+							onChange={e => setName(e.target.value.toString())}
+							onBlur={checkInput}
+							value={name}
+						/>
+						<div className='Contact__form__check'>{nameChecked}</div>
+						<label className='Contact__form__label'>e-Mail :</label>
+						<input
+							className='Contact__form__input'
+							placeholder='Your email address'
+							type='email'
+							onChange={e => setEmail(e.target.value.toString())}
+							onBlur={checkEmail}
+							value={email}
+						/>
+						<div className='Contact__form__check'>{emailChecked}</div>
+						<label className='Contact__form__label'>Message :</label>
+						<textarea
+							className='Contact__form__textarea '
+							placeholder='Your message...'
+							onChange={e => setMessage(e.target.value.toString())}
+							onBlur={checkInput}
+							value={message}
+						/>
+						<div className='Contact__form__check'>{messageChecked}</div>
+					</div>
+					<div className='Contact__recaptcha'>
+						<Recaptcha
+							sitekey={`${process.env.REACT_APP_RECAPTCHA_SITE_KEY}`}
+							render='explicit'
+							verifyCallback={verifyCallback}
+							onloadCallback={onloadCallback}
+						/>
+					</div>
+					{sending ? (
+						<div className='sending-email'>
+							<img
+								alt='sending email animation'
+								src={process.env.PUBLIC_URL + `/images/loading.svg`}
+							/>
+						</div>
+					) : (
+						(answer || error) && (
+							<div className=''>
+								{answer && <div className='Contact__answer'>{answer}</div>}
+								{error && <div className='Contact__error'>{error}</div>}
+							</div>
+						)
+					)}
+					<div className='Contact__send'>
+						<div className='Contact__form__check'>{formChecked}</div>
+						<div className='Contact__send__btn' onClick={sendMessage}>
+							<BiMailSend /> Send Message
+						</div>
+					</div>
+					<div className='Contact-direct'>
+						If you prefer you can send me directly an E-mail :
+					</div>
+					<div className='Contact-subtitle' id='contactSubtitle'>
+						romaingiouxdev@gmail.com
+					</div>
+					<FooterLinks />
 				</div>
-			</div>
-			<div className='Contact-direct'>
-				If you prefer you can send me directly an E-mail :
-			</div>
-			<div className='Contact-subtitle' id='contactSubtitle'>
-				romaingiouxdev@gmail.com
-			</div>
-			<FooterLinks />
-		</div>
+			</Layout>
+		</motion.div>
 	)
 }
 

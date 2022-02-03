@@ -1,0 +1,165 @@
+/*******************  loading animation *******************/
+.overflow-hidden {
+	overflow: hidden;
+}
+.blackbox {
+	position: absolute;
+	z-index: 60;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	max-width: 100vw;
+	overflow-x: hidden;
+	background-color: #7382a2;
+	background-image: $topo-background;
+}
+.anim-svg {
+	z-index: 80;
+	display: flex;
+	position: absolute;
+}
+/*******************  TEXT ROMAIN GIOUX *******************/
+#title-name {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 200;
+	width: 100vw;
+	height: 50vh;
+}
+#path-1-outside-1 {
+	width: 100vw;
+	height: 50vh;
+	animation: fill 0.6s ease forwards 0s;
+}
+#rect {
+	width: 100vw;
+	height: 50vh;
+}
+#path1,
+#path2,
+#path3,
+#path4,
+#path5,
+#path6,
+#path7,
+#path8,
+#path9,
+#path10,
+#path11 {
+	stroke: white;
+}
+#path1 {
+	stroke-dasharray: 165.1499786376953;
+	stroke-dashoffset: 165.1499786376953;
+	animation: line-anim 1s ease forwards 0.1s;
+}
+#path2 {
+	stroke-dasharray: 105.14295196533203;
+	stroke-dashoffset: 105.14295196533203;
+	animation: line-anim 1s ease forwards 0.3s;
+}
+#path3 {
+	stroke-dasharray: 153.9714813232422;
+	stroke-dashoffset: 153.9714813232422;
+	animation: line-anim 1s ease forwards 0.6s;
+}
+#path4 {
+	stroke-dasharray: 139.68431091308594;
+	stroke-dashoffset: 139.68431091308594;
+	animation: line-anim 1s ease forwards 0.9s;
+}
+#path5 {
+	stroke-dasharray: 118.67262268066406;
+	stroke-dashoffset: 118.67262268066406;
+	animation: line-anim 1s ease forwards 1.2s;
+}
+#path6 {
+	stroke-dasharray: 164.9680938720703;
+	stroke-dashoffset: 164.9680938720703;
+	animation: line-anim 1s ease forwards 1.5s;
+}
+#path7 {
+	stroke-dasharray: 145.65478515625;
+	stroke-dashoffset: 145.65478515625;
+	animation: line-anim 1s ease forwards 1.8s;
+}
+#path8 {
+	stroke-dasharray: 118.67290496826172;
+	stroke-dashoffset: 118.67290496826172;
+	animation: line-anim 1s ease forwards 2.1s;
+}
+#path9 {
+	stroke-dasharray: 105.14337158203125;
+	stroke-dashoffset: 105.14337158203125;
+	animation: line-anim 1s ease forwards 2.4s;
+}
+#path10 {
+	stroke-dasharray: 117.11478424072266;
+	stroke-dashoffset: 117.11478424072266;
+	animation: line-anim 1s ease forwards 2.7s;
+}
+#path11 {
+	stroke-dasharray: 112.3947982788086;
+	stroke-dashoffset: 112.3947982788086;
+	animation: line-anim 1s ease forwards 3s;
+}
+@keyframes line-anim {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes fill {
+	90% {
+		fill: white;
+	}
+	100% {
+		fill: black;
+	}
+}
+/*--------------------------------TEXT WEB DEVELOPER -------------------------*/
+#web-dev {
+	position: relative;
+	top: 66%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 200;
+	width: 80vw;
+	height: 50vh;
+	scale: 0.6;
+}
+#dev-text {
+	animation: show 1.2s ease forwards 3.2s;
+}
+@keyframes show {
+	from {
+		fill: transparent;
+	}
+	to {
+		fill: var(--sec-light);
+	}
+}
+/******************************************************************************************
+********************************   MEDIA QUERIES   ****************************************
+********************************************************************************************
+********************************       TABLET       ****************************************
+********************************************************************************************/
+@media only screen and (min-width: 732px) {
+	#title-name,
+	#path-1-outside-1,
+	#rect {
+		width: 600px;
+		height: 200px;
+	}
+	#web-dev {
+		width: 400px;
+		height: 150px;
+		position: relative;
+		top: 120%;
+		left: 70%;
+		scale: 1;
+	}
+}

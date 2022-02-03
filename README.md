@@ -10,10 +10,7 @@ Front End :
 - Dependencies : react-router / axios / react-icons
 - Styling: SASS / node-sass
 - Animations : SVG, GSAP & ScrollTrigger
+- Page Transition : Framer Motion
 - Blob landing page : Pixi.js / debounce / simplex-noise
 - Tilting Cards : Vanilla-tilt
-
-Back End :
-
-- Rest API : Node.js + express + axios
-- Emails : nodemailer
+- Contact Form : Emailjs

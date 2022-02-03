@@ -6,7 +6,7 @@ import * as PIXI from "pixi.js"
 import { KawaseBlurFilter } from "@pixi/filter-kawase-blur"
 import SimplexNoise from "simplex-noise"
 import debounce from "debounce"
-import "../styles/App.css"
+import "../styles/App.scss"
 
 const colorPalette = [
 	"0xc4e3ec",
@@ -66,7 +66,6 @@ function Landing() {
 		const app = new PIXI.Application({
 			view: document.querySelector(".orb-canvas"),
 			resizeTo: window,
-			//transparent: true,
 			backgroundAlpha: false,
 		})
 		app.stage.filters = [new KawaseBlurFilter(30, 10, true)]

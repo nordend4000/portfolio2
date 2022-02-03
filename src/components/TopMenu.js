@@ -2,7 +2,6 @@ import React, { useRef, useLayoutEffect, useEffect, useState } from "react"
 import { gsap } from "gsap"
 import { NavLink, Link } from "react-router-dom"
 import Logo from "../ressources/Logo"
-
 import "../styles/menu.scss"
 
 const DATA_TOPLINK = ["Portfolio", "Skills", "About", "Contact"]
@@ -34,7 +33,7 @@ const DATA_MOBILE_LINK = [
 	},
 ]
 
-function TopMenu() {
+function TopMenu({ isFirstMount }) {
 	const [menuIcon, setMenuIcon] = useState(false)
 	const [playMenu, setPlayMenu] = useState(false)
 	const [reverseMenu, setReverseMenu] = useState(false)
@@ -74,7 +73,7 @@ function TopMenu() {
 			y: -600,
 			ease: "back",
 		})
-	}, [])
+	}, [isFirstMount])
 
 	useLayoutEffect(() => {
 		if (!playMenu) return

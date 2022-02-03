@@ -10,7 +10,7 @@ const DATA_MOREPROJECTS = [
 		index: 0,
 		title: "Web Dev Portfolio",
 		subtitle:
-			"The current website you are looking at. My Portfolio is designed using Figma and built with React and SASS. Animations are crafted using GSAP, SVG and Pixi.js. A Node.js server with Express handles the contact form submission.",
+			"The current website you are looking at. My Portfolio is designed using Figma and built with React and SASS. Animations are crafted using GSAP, Framer Motion and Pixi.js. Emailjs handles the contact form submission.",
 		stackLine: <StackLine0 />,
 		linkGit: "https://github.com/nordend4000/portfolio2",
 		linkSite: "https://romaingioux.dev",

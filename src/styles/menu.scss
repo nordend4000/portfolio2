@@ -6,7 +6,7 @@
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	z-index: 100;
+	z-index: 30;
 	clip-path: circle(100%);
 	background-color: #9cb8cc;
 	background-image: $topo-background-menu;
@@ -28,10 +28,10 @@
 /*-----------------  LOGO  -----------------------------*/
 .logo-svg svg {
 	position: absolute;
-	top: 2%;
-	left: 10%;
-	z-index: 100;
-	height: 11%;
+	top: 1%;
+	left: 1%;
+	z-index: 30;
+	height: 9%;
 }
 .logo:hover {
 	cursor: pointer;
@@ -64,7 +64,7 @@
 	right: 2vw;
 	display: flex;
 	justify-content: center;
-	z-index: 100;
+	z-index: 40;
 	&__link {
 		text-decoration: none;
 		padding: 5px 2vw;
@@ -93,7 +93,7 @@
 	position: absolute;
 	top: 2.2%;
 	right: 4.5%;
-	z-index: 200;
+	z-index: 50;
 	display: flex;
 	justify-content: center;
 	align-items: center;
