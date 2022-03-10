@@ -2,8 +2,8 @@ import React from "react"
 import "../styles/footer.scss"
 import { Link } from "react-router-dom"
 import Signature from "../ressources/Signature"
-import PDF_FR from "../ressources/cv-fr.pdf"
-import PDF_EN from "../ressources/cv-en.pdf"
+import PDF_FR from "../ressources/resume-fr.pdf"
+import PDF_EN from "../ressources/resume-en.pdf"
 
 export default function Footer() {
 	return (

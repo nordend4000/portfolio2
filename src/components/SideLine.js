@@ -5,7 +5,7 @@ import { AiFillGithub } from "react-icons/ai"
 import { AiFillLinkedin } from "react-icons/ai"
 import { AiOutlineMail } from "react-icons/ai"
 import { IoDocumentTextOutline } from "react-icons/io5"
-import PDF_EN from "../ressources/cv-en.pdf"
+import PDF_EN from "../ressources/resume-en.pdf"
 
 function SideLine() {
 	const sideline = useRef()
