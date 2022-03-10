@@ -4,6 +4,7 @@ import { SiCypress } from "react-icons/si"
 import { SiJest } from "react-icons/si"
 import { SiFramer } from "react-icons/si"
 import { SiTailwindcss } from "react-icons/si"
+import { SiTestinglibrary } from "react-icons/si"
 
 const DATA_FRONTEND2 = [
 	{
@@ -44,7 +45,14 @@ const DATA_FRONTEND2 = [
 	{
 		logo: <SiJest className='Stars-container__icons' />,
 		data: "Jest",
-		level: 2.5,
+		level: 3,
+		title: "white-text",
+		icons: "red-light-text",
+	},
+	{
+		logo: <SiTestinglibrary className='Stars-container__icons' />,
+		data: "Testing Library",
+		level: 3,
 		title: "white-text",
 		icons: "red-light-text",
 	},

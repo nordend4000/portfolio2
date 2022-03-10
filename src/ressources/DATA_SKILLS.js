@@ -9,12 +9,21 @@ import { SiNextdotjs } from "react-icons/si"
 import { SiTailwindcss } from "react-icons/si"
 import { BsBootstrap } from "react-icons/bs"
 import { SiFramer } from "react-icons/si"
+import { SiTestinglibrary } from "react-icons/si"
+import { SiJest } from "react-icons/si"
+import { SiCypress } from "react-icons/si"
+import { SiTypescript } from "react-icons/si"
 
 const DATA_SKILLS = [
 	{
 		abrev: <IoLogoJavascript />,
 		title: "JavaScript",
 		text: "The world's most popular programming language to create dynamic user interfaces and interactive web experiences. I am used to handle modern features from ES6 to ES12 to build modern Web Apps.",
+	},
+	{
+		abrev: <SiTypescript />,
+		title: "TypeScript",
+		text: "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.",
 	},
 	{
 		abrev: <IoLogoReact />,
@@ -65,6 +74,21 @@ const DATA_SKILLS = [
 		abrev: <SiMongodb />,
 		title: "Mongo DB",
 		text: "NoSQL database program to use JSON-like documents. Even if I like working with the structure of SQL database, Mongo Db allow flexibility and modularity to manage data flow.",
+	},
+	{
+		abrev: <SiTestinglibrary />,
+		title: "Testing Library",
+		text: "Simple and complete testing utilities that encourage good testing practices. The more your tests resemble the way your software is used, the more confidence they can give you.",
+	},
+	{
+		abrev: <SiCypress />,
+		title: "Cypress.io",
+		text: "Cypress is the leader in browser-based test automation for the modern web. Cypress enables developers to easily, quickly, and accurately test anything that runs in the browser, empowering developers to build modern web applications faster, better.",
+	},
+	{
+		abrev: <SiJest />,
+		title: "Jest",
+		text: "Jest is a delightful JavaScript Testing Framework with a focus on simplicity. It is one of the most popular test runner these days",
 	},
 ]
 

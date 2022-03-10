@@ -4,12 +4,20 @@ import { IoLogoCss3 } from "react-icons/io5"
 import { IoLogoReact } from "react-icons/io5"
 import { IoLogoSass } from "react-icons/io5"
 import { SiNextdotjs } from "react-icons/si"
+import { SiTypescript } from "react-icons/si"
 
 const DATA_FRONTEND1 = [
 	{
 		logo: <IoLogoJavascript className='Stars-container__icons' />,
 		data: "JavaScript",
 		level: 4,
+		title: "white-text",
+		icons: "red-light-text",
+	},
+	{
+		logo: <SiTypescript className='Stars-container__icons' />,
+		data: "TypeScript",
+		level: 3.5,
 		title: "white-text",
 		icons: "red-light-text",
 	},

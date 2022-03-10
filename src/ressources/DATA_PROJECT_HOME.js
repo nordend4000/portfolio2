@@ -1,13 +1,5 @@
 const DATA_PROJECT_HOME = [
 	{
-		title: "Showcase Website",
-		subtitle: `Website to promote the book "Beyond Simien Mountains". Personal story and amazing photographies of a trek in Ethiopia to support local communities.`,
-		btn: "View Website",
-		url: "https://beyond-simienmountains.herokuapp.com",
-		git: "https://github.com/nordend4000/beyond-simien-moutains-",
-		image: "simien",
-	},
-	{
 		title: "Community Network",
 		subtitle:
 			"Social App to connect outdoor sport addicts. Join the community and post your planned trip to find people around you. Browse upcomming trips using an interactive map.",
@@ -15,6 +7,14 @@ const DATA_PROJECT_HOME = [
 		url: "https://neveralone.netlify.app/",
 		git: "https://github.com/nordend4000/never-alone",
 		image: "neveralone",
+	},
+	{
+		title: "Currency Converter",
+		subtitle: `Currency Converter and Historic rates using real-time data. Never miss new market trends. Never miss new market trends and convert up to 160 different currencies.`,
+		btn: "View App",
+		url: "https://ezy-currency.netlify.app",
+		git: "https://github.com/nordend4000/ezy-currency",
+		image: "currency",
 	},
 	{
 		title: "Weather Application",

@@ -1,5 +1,13 @@
 const DATA_RESUME = [
 	{
+		title: "TypeScript",
+		subtitle: "Offical Documentation - Online courses",
+		categorie: "WEB DEVELOPMENT TRAINING",
+		description:
+			"TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. Training including Types, Unions, Interfaces, Generics and how to handle TypeScript with React.js. ",
+		date: "January 2022",
+	},
+	{
 		title: "Next.js",
 		subtitle: "Offical Documentation - Online courses",
 		categorie: "WEB DEVELOPMENT TRAINING",
