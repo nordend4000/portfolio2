@@ -258,6 +258,7 @@ function Home({ isFirstMount }) {
 													alt='polygone topographic shape for background'
 												/>
 											</div>
+											<div className='fifty'>{project.stackLine}</div>
 										</div>
 										<img
 											src={

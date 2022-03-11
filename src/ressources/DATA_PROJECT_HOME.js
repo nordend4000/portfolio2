@@ -1,3 +1,8 @@
+import StackLine2 from "./StackLine2"
+import StackLine3 from "./StackLine3"
+import StackLine10 from "./StackLine11"
+import StackLine11 from "./StackLine10"
+
 const DATA_PROJECT_HOME = [
 	{
 		title: "Community Network",
@@ -7,6 +12,7 @@ const DATA_PROJECT_HOME = [
 		url: "https://neveralone.netlify.app/",
 		git: "https://github.com/nordend4000/never-alone",
 		image: "neveralone",
+		stackLine: <StackLine2 />,
 	},
 	{
 		title: "Currency Converter",
@@ -15,6 +21,7 @@ const DATA_PROJECT_HOME = [
 		url: "https://ezy-currency.netlify.app",
 		git: "https://github.com/nordend4000/ezy-currency",
 		image: "currency",
+		stackLine: <StackLine3 />,
 	},
 	{
 		title: "Weather Application",
@@ -24,6 +31,7 @@ const DATA_PROJECT_HOME = [
 		url: "https://ezy-weather.vercel.app/",
 		git: "https://github.com/nordend4000/ezy-weather",
 		image: "ezy",
+		stackLine: <StackLine10 />,
 	},
 	{
 		title: "Logbook Application",
@@ -33,6 +41,7 @@ const DATA_PROJECT_HOME = [
 		url: "https://paraglidinglogbook.netlify.app",
 		git: "https://github.com/nordend4000/paraglidinglogbook",
 		image: "logbook",
+		stackLine: <StackLine11 />,
 	},
 ]
 export default DATA_PROJECT_HOME
