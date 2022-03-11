@@ -71,12 +71,17 @@
 		margin-top: 10px;
 	}
 	&__text-undeline {
+		display: flex;
+		margin-right: 50px;
 		font-weight: 500;
-		font-size: 0.9rem;
+		font-size: 0.8rem;
 		color: var(--sec-dark);
-		margin-bottom: 1%;
+		margin-bottom: 0.2%;
 		letter-spacing: 2px;
 		line-height: 22px;
+	}
+	&__text-undeline p {
+		margin-right: 12px;
 	}
 	&__logo {
 		position: relative;
@@ -219,7 +224,7 @@
 		&__text-undeline {
 			font-weight: 500;
 			font-size: 0.8rem;
-			margin-bottom: 8%;
+			margin-bottom: 1%;
 			letter-spacing: 2px;
 			line-height: 20px;
 		}

@@ -23,7 +23,7 @@ const DATA_MOREPROJECTS = [
 		index: 1,
 		title: "Logbook App",
 		subtitle:
-			"App to store Paragliding flights data, compute statistics, filter database and manage gear.",
+			"App to store Paragliding flights data, compute statistics, filter database and manage gear. Upload .gpx files to visualise flying trace on the map.",
 		stackLine: <StackLine11 />,
 		linkGit: "https://github.com/nordend4000/portfolio2",
 		linkSite: "https://romaingioux.dev",

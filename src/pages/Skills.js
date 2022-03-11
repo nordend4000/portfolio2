@@ -98,7 +98,7 @@ function Skills() {
 	}, [])
 
 	return (
-		<motion.div initial='initial' animate='animate' exit='exit' variants={Page}>
+		<div initial='initial' animate='animate' exit='exit' variants={Page}>
 			<Layout>
 				<div className='Panel' ref={panels}>
 					<Helmet>
@@ -306,7 +306,7 @@ function Skills() {
 				</div>
 				<div className='bottom-skills'></div>
 			</Layout>
-		</motion.div>
+		</div>
 	)
 }
 

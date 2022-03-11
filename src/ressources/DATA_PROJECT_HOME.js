@@ -10,7 +10,7 @@ const DATA_PROJECT_HOME = [
 	},
 	{
 		title: "Currency Converter",
-		subtitle: `Currency Converter and Historic rates using real-time data. Never miss new market trends. Never miss new market trends and convert up to 160 different currencies.`,
+		subtitle: `Currency Converter and Historic rates using real-time data. Never miss new market trends and convert up to 160 different currencies.`,
 		btn: "View App",
 		url: "https://ezy-currency.netlify.app",
 		git: "https://github.com/nordend4000/ezy-currency",
