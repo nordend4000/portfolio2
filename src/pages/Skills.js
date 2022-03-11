@@ -15,6 +15,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Helmet } from "react-helmet"
 import "../styles/skills.scss"
 import { Page } from "../ressources/variants"
+import { motion } from "framer-motion/dist/framer-motion"
 
 function Skills() {
 	const skillsRef = useRef()
@@ -97,7 +98,7 @@ function Skills() {
 	}, [])
 
 	return (
-		<div initial='initial' animate='animate' exit='exit' variants={Page}>
+		<motion.div initial='initial' animate='animate' exit='exit' variants={Page}>
 			<Layout>
 				<div className='Panel' ref={panels}>
 					<Helmet>
@@ -305,7 +306,7 @@ function Skills() {
 				</div>
 				<div className='bottom-skills'></div>
 			</Layout>
-		</div>
+		</motion.div>
 	)
 }
 
