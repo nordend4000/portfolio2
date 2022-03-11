@@ -15,7 +15,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Helmet } from "react-helmet"
 import "../styles/skills.scss"
 import { Page } from "../ressources/variants"
-import { motion } from "framer-motion/dist/framer-motion"
 
 function Skills() {
 	const skillsRef = useRef()
