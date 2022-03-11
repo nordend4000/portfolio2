@@ -2,7 +2,12 @@
 
 Projects, skills, background, contact & resume all you need to know to hire me.
 
+<a href="https://romaingioux.dev"><img src="https://res.cloudinary.com/dokbrxcp2/image/upload/v1647000989/images/portfolio_copie_hvfwh6.png" alt="Portfolio"/></a>
+
 ### https://romaingioux.dev
+
+<img src="https://res.cloudinary.com/dokbrxcp2/image/upload/v1647005684/images/portfolio_copie_2_t9gpcr.png" alt="Portfolio stack"/>
+
 
 Front End :
 
